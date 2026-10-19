@@ -252,3 +252,40 @@ export function parseStoredForm(raw: string | null): NormalStageForm | null {
     return null
   }
 }
+
+/** 챕터 전체 표에 보여 줄 피해 구간(낮은 구간부터) */
+export const CHAPTER_BAND_MULTIPLIERS = [0.15, 0.35, 0.55, 0.75, 1] as const
+
+export interface ChapterStage {
+  st: number
+  boss: string
+  /** 피해 100%에 필요한 팀 전투력(원) */
+  power: number
+  /** 피해 15%·35%·55%·75%·100% 구간에 들어가는 팀 전투력(원), CHAPTER_BAND_MULTIPLIERS 순서 */
+  bands: BandPower[]
+  accuracyNeeded: number
+  focusNeeded: number
+  /** 팀 전투력을 넣었을 때 이 스테이지에서의 피해 배율 */
+  multiplier: number | null
+}
+
+/** 한 챕터의 30개 스테이지 필요 스펙을 한 번에 계산한다. 단일 스테이지 계산과 같은 공식을 쓴다. */
+export function computeChapter(
+  data: StagesData,
+  ch: number,
+  options: { cp: number | null; baseRateBp: number; locale: Locale },
+): ChapterStage[] {
+  const bands = CHAPTER_BAND_MULTIPLIERS.map((m) => DAMAGE_BANDS.find((band) => band.multiplier === m)!)
+  return data.rows
+    .filter((row) => row[0] === ch)
+    .sort((a, b) => a[1] - b[1])
+    .map((row) => ({
+      st: row[1],
+      boss: row[5] >= 0 ? localizedText(data.bosses[row[5]]?.[0] ?? '', options.locale) : '',
+      power: row[2],
+      bands: bands.map((band) => ({ multiplier: band.multiplier, power: Math.ceil(row[2] * band.min) })),
+      accuracyNeeded: accuracyNeeded(0, row[3]),
+      focusNeeded: focusNeeded(0, row[4], 0, options.baseRateBp),
+      multiplier: options.cp === null ? null : powerPenalty(options.cp, row[2]).multiplier,
+    }))
+}

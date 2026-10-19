@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { stagesQuery } from '../../api/queries'
-import { useI18n, type Translate } from '../../i18n'
+import { pick, useI18n, type Translate } from '../../i18n'
 import { formatCeil, formatMillions, formatMillionsUnit, formatPercent } from '../../lib/format'
 import { readStorage, writeStorage } from '../../lib/storage'
 import { readTeamPower, writeTeamPower } from '../../lib/teamPower'
@@ -13,6 +13,7 @@ import {
   MAX_CHAPTER,
   STAGES_PER_CHAPTER,
   canShiftStage,
+  computeChapter,
   computeNormalStage,
   parseStoredForm,
   shiftStage,
@@ -22,9 +23,11 @@ import {
 import type { Locale, StagePos } from '../../types'
 import { localizedText } from '../../lib/localize'
 import { NumberCombobox, type ComboOption } from '../../components/NumberCombobox'
+import { ChapterOverview } from './ChapterOverview'
 
 const FORM_KEY = 'crumble.stage.v2'
 const POWER_OPEN_KEY = 'crumble.stage.power-open'
+const VIEW_KEY = 'crumble.stage.view'
 const CHAPTER_OPTIONS: ComboOption[] = Array.from({ length: MAX_CHAPTER }, (_, i) => ({ value: i + 1 }))
 const STAGE_NUMBERS = Array.from({ length: STAGES_PER_CHAPTER }, (_, i) => i + 1)
 
@@ -281,6 +284,28 @@ export function NormalStage() {
     })
   }, [stages.data, chapterNo, locale])
 
+  // 도전 범위 표와 챕터 전체 보기 중 마지막으로 고른 보기를 기억한다.
+  const [view, setView] = useState<'range' | 'chapter'>(() => (readStorage(VIEW_KEY) === 'chapter' ? 'chapter' : 'range'))
+  const changeView = (next: 'range' | 'chapter') => {
+    setView(next)
+    writeStorage(VIEW_KEY, next)
+  }
+  const chapterValid = Number.isInteger(chapterNo) && chapterNo >= 1 && chapterNo <= MAX_CHAPTER
+  // 챕터만 고른 상태(스테이지 미입력)에서도 그래프에 내 전투력을 그리도록 입력값에서 바로 읽는다.
+  const cpMValue = Number(form.cpM)
+  const teamPower = form.cpM !== '' && Number.isFinite(cpMValue) && cpMValue > 0 ? cpMValue * 1e6 : null
+  const chapterStages = useMemo(
+    () =>
+      stages.data && chapterValid
+        ? computeChapter(stages.data, chapterNo, {
+            cp: teamPower,
+            baseRateBp: Number(form.debuffRate) || 1e4,
+            locale,
+          })
+        : null,
+    [stages.data, chapterValid, chapterNo, teamPower, form.debuffRate, locale],
+  )
+
   const position: StagePos = { ch: Number(form.ch), st: Number(form.st) }
   const positionValid =
     Number.isInteger(position.ch) &&
@@ -508,11 +533,54 @@ export function NormalStage() {
         </div>
 
         <section className="panel reach-section" aria-labelledby="reach-title">
-          <div className="section-heading">
-            <h3 id="reach-title">{t('이 전투력이면 어디까지 도전할까?')}</h3>
-            <p>{t('현재 전투력으로 각 피해 비율 이상을 유지할 수 있는 마지막 스테이지입니다.')}</p>
+          <div className="section-heading with-toggle">
+            <div>
+              <h3 id="reach-title">
+                {view === 'range'
+                  ? t('이 전투력이면 어디까지 도전할까?')
+                  : pick(locale, '챕터 30개 스테이지 필요 스펙', 'Specs for all 30 stages in the chapter', '章内30ステージの必要スペック')}
+              </h3>
+              <p>
+                {view === 'range'
+                  ? t('현재 전투력으로 각 피해 비율 이상을 유지할 수 있는 마지막 스테이지입니다.')
+                  : pick(
+                      locale,
+                      '챕터만 고르면 1~30 스테이지의 필요 전투력·명중·집중을 한 번에 봅니다.',
+                      'Pick a chapter to see Power, Accuracy and Focus for stages 1–30 at once.',
+                      'チャプターを選ぶと1〜30ステージの必要戦闘力・命中・集中をまとめて確認できます。',
+                    )}
+              </p>
+            </div>
+            <div className="view-toggle" role="group" aria-label={pick(locale, '보기 방식', 'View', '表示方法')}>
+              <button type="button" aria-pressed={view === 'range'} onClick={() => changeView('range')}>
+                {pick(locale, '도전 범위', 'Reach', '挑戦範囲')}
+              </button>
+              <button type="button" aria-pressed={view === 'chapter'} onClick={() => changeView('chapter')}>
+                {pick(locale, '챕터 전체', 'Whole chapter', 'チャプター全体')}
+              </button>
+            </div>
           </div>
 
+          {view === 'chapter' ? (
+            chapterStages ? (
+              <ChapterOverview
+                ch={chapterNo}
+                stages={chapterStages}
+                selectedSt={positionValid ? position.st : null}
+                cp={teamPower}
+                debuffRateBp={Number(form.debuffRate) || 1e4}
+                // 챕터를 훑어보는 중이므로 선택만 바꾸고 스크롤은 그대로 둔다.
+                onSelect={(st) => goToStage({ ch: chapterNo, st })}
+              />
+            ) : (
+              <p className="result-placeholder">
+                {stages.data
+                  ? pick(locale, '챕터를 고르면 30개 스테이지를 보여 줍니다.', 'Pick a chapter to see its 30 stages.', 'チャプターを選ぶと30ステージを表示します。')
+                  : t('스테이지 데이터를 불러오고 있습니다.')}
+              </p>
+            )
+          ) : (
+          <>
           <div id="current-reach" aria-live="polite">
             {result?.currentReach && result.cp !== null && (
               <div className="current-reach-summary">
@@ -651,6 +719,8 @@ export function NormalStage() {
               '스테이지를 누르면 그곳의 필요 전투력과 명중을 확인합니다. 피해 비율은 클리어 확률이 아니며, 실제 클리어는 조합·스킬·생존에 따라 달라집니다.',
             )}
           </p>
+          </>
+          )}
         </section>
 
         <section className="panel focus-section" aria-labelledby="focus-title">

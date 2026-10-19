@@ -36,6 +36,9 @@
   --warn: #ff9e6b;
   --warn-soft: rgba(255, 158, 107, 0.13);
 
+  /* 차트 선: 다크 배경에서 밝기 범위를 맞춘 딸기잼 한 단계 진한 색 */
+  --chart-series: #f2506f;
+
   --shadow: 0 1px 0 rgba(255, 237, 220, 0.04) inset;
   --radius-panel: 22px;
   --radius-item: 14px;
@@ -63,6 +66,7 @@
   --good-soft: rgba(18, 149, 122, 0.1);
   --warn: #c75a1e;
   --warn-soft: rgba(199, 90, 30, 0.09);
+  --chart-series: #e23e62;
   --shadow: 0 1px 2px rgba(120, 40, 60, 0.05);
 }
 
@@ -1764,4 +1768,233 @@ input::placeholder {
   margin-top: 8px;
   color: var(--muted);
   font-size: 13px;
+}
+
+/* ---------- 도전 범위 / 챕터 전체 보기 ---------- */
+.section-heading.with-toggle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+.view-toggle {
+  flex: none;
+  display: inline-flex;
+  padding: 3px;
+  gap: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface-2);
+}
+.view-toggle button {
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--muted);
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.view-toggle button[aria-pressed='true'] {
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 0 0 1px var(--line-strong);
+}
+.chapter-overview-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-bottom: 8px;
+}
+.chapter-overview-head h4 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.chapter-chart {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  touch-action: pan-y;
+}
+.chapter-chart svg {
+  display: block;
+  cursor: pointer;
+}
+.chart-grid {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+.chart-axis {
+  fill: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.chart-line {
+  fill: none;
+  stroke: var(--chart-series);
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.chart-reference {
+  stroke: var(--text-2);
+  stroke-width: 1;
+}
+.chart-reference-label {
+  fill: var(--text-2);
+  font-size: 11px;
+  font-weight: 700;
+}
+.chart-selected-rule {
+  stroke: var(--line-strong);
+  stroke-width: 6;
+  opacity: 0.6;
+}
+.chart-crosshair {
+  stroke: var(--muted);
+  stroke-width: 1;
+}
+.chart-dot {
+  fill: var(--chart-series);
+  stroke: var(--surface);
+  stroke-width: 2;
+}
+.chart-dot.is-selected {
+  fill: var(--surface);
+  stroke: var(--chart-series);
+  stroke-width: 3;
+}
+.chart-tooltip {
+  position: absolute;
+  z-index: 5;
+  min-width: 150px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-item);
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  font-size: 12px;
+  pointer-events: none;
+}
+.chart-tooltip dl {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 2px 12px;
+  margin: 6px 0 0;
+}
+.chart-tooltip dt {
+  color: var(--muted);
+}
+.chart-tooltip dd {
+  margin: 0;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+/*
+ * 넓은 화면: 표가 패널 안에 다 들어가므로 바깥 스크롤 컨테이너를 두지 않고,
+ * 제목 행을 페이지 스크롤에 고정한다(상단 바 높이만큼 내려서).
+ */
+.chapter-table-wrap {
+  margin-top: 14px;
+}
+.chapter-table thead th {
+  position: sticky;
+  top: 64px;
+  z-index: 2;
+  background: var(--surface);
+  box-shadow: inset 0 -1px 0 var(--line-strong);
+}
+.chapter-table td.is-met {
+  color: var(--good);
+}
+.chapter-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.chapter-table th,
+.chapter-table td {
+  padding: 7px 10px;
+  border-top: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+.chapter-table thead th {
+  border-top: 0;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.chapter-table thead th small {
+  font-weight: 400;
+  color: var(--muted);
+}
+.chapter-table th:first-child,
+.chapter-table .chapter-boss,
+.chapter-table thead th:nth-child(2) {
+  text-align: left;
+}
+.chapter-table .chapter-boss {
+  color: var(--text-2);
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.chapter-table tbody tr:hover {
+  background: var(--surface-2);
+}
+.chapter-table tr.is-selected {
+  background: var(--accent-soft);
+}
+.chapter-stage-button {
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: var(--font-num);
+  font-size: 14px;
+  color: var(--text);
+}
+.chapter-table tr.is-selected .chapter-stage-button {
+  color: var(--accent);
+}
+@media (max-width: 640px) {
+  .section-heading.with-toggle {
+    flex-direction: column;
+  }
+}
+/*
+ * 좁은 화면: 열이 많아 가로 스크롤이 필요하다. 가로 스크롤 컨테이너 안에서는 페이지 기준 고정이
+ * 동작하지 않으므로, 표 영역에 높이를 주고 그 안에서 세로로 스크롤하며 제목 행과 스테이지 열을 고정한다.
+ */
+@media (max-width: 1000px) {
+  .chapter-table-wrap {
+    max-height: min(70vh, 560px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-item);
+  }
+  .chapter-table thead th {
+    top: 0;
+  }
+  .chapter-table th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background: var(--surface);
+    box-shadow: inset -1px 0 0 var(--line);
+  }
+  .chapter-table thead th:first-child {
+    z-index: 3;
+  }
+  .chapter-table tr.is-selected th:first-child {
+    background: color-mix(in srgb, var(--accent) 14%, var(--surface));
+  }
 }

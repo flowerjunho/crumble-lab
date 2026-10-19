@@ -5,7 +5,7 @@ import type { DimensionData, StagesData } from '../types'
 import messages from '../messages.json'
 import { DAMAGE_BANDS, powerPenalty } from './formulas'
 import { formatDimensionMillions, formatMillionsUnit } from './format'
-import { DEMO_FORM, computeNormalStage, shiftStage, type NormalStageResult } from './normalStage'
+import { DEMO_FORM, computeChapter, computeNormalStage, shiftStage, type NormalStageResult } from './normalStage'
 
 const root = join(__dirname, '..', '..')
 const stages = JSON.parse(readFileSync(join(root, 'public/data/stages.json'), 'utf8')) as StagesData
@@ -62,6 +62,30 @@ describe('일반 스테이지 (원본 화면과 비교)', () => {
     expect(shiftStage({ ch: 1, st: 30 }, 1)).toEqual({ ch: 2, st: 1 })
     expect(shiftStage({ ch: 1, st: 1 }, -1)).toEqual({ ch: 1, st: 1 })
     expect(shiftStage({ ch: 364, st: 30 }, 1)).toEqual({ ch: 364, st: 30 })
+  })
+})
+
+describe('챕터 전체 보기', () => {
+  const chapter = computeChapter(stages, 114, { cp: 105e6, baseRateBp: 10000, locale: 'ko' })
+  const single = computeNormalStage(stages, DEMO_FORM, 'ko') as NormalStageResult
+
+  it('30개 스테이지를 순서대로 돌려준다', () => {
+    expect(chapter.map((stage) => stage.st)).toEqual(Array.from({ length: 30 }, (_, i) => i + 1))
+  })
+
+  it('단일 스테이지 계산과 같은 값을 낸다', () => {
+    const st22 = chapter[21]!
+    expect(st22.boss).toBe(single.boss)
+    expect(st22.power).toBe(single.row![2])
+    // 15%~100% 구간 전투력이 단일 스테이지 계산의 구간 값과 같아야 한다.
+    for (const band of st22.bands) {
+      expect(band.power).toBe(single.bands.find((b) => b.multiplier === band.multiplier)!.power)
+    }
+    expect(st22.bands.map((b) => b.multiplier)).toEqual([0.15, 0.35, 0.55, 0.75, 1])
+    expect(st22.bands.at(-1)!.power).toBe(st22.power)
+    expect(st22.accuracyNeeded).toBe(722)
+    expect(st22.focusNeeded).toBe(612)
+    expect(st22.multiplier).toBe(0.75)
   })
 })
 
