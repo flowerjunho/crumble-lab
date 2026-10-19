@@ -36,9 +36,6 @@
   --warn: #ff9e6b;
   --warn-soft: rgba(255, 158, 107, 0.13);
 
-  /* 차트 선: 다크 배경에서 밝기 범위를 맞춘 딸기잼 한 단계 진한 색 */
-  --chart-series: #f2506f;
-
   --shadow: 0 1px 0 rgba(255, 237, 220, 0.04) inset;
   --radius-panel: 22px;
   --radius-item: 14px;
@@ -66,7 +63,6 @@
   --good-soft: rgba(18, 149, 122, 0.1);
   --warn: #c75a1e;
   --warn-soft: rgba(199, 90, 30, 0.09);
-  --chart-series: #e23e62;
   --shadow: 0 1px 2px rgba(120, 40, 60, 0.05);
 }
 
@@ -1813,87 +1809,6 @@ input::placeholder {
   margin: 0;
   font-size: 14px;
   color: var(--text-2);
-}
-.chapter-chart {
-  position: relative;
-  width: 100%;
-  min-height: 240px;
-  touch-action: pan-y;
-}
-.chapter-chart svg {
-  display: block;
-  cursor: pointer;
-}
-.chart-grid {
-  stroke: var(--line);
-  stroke-width: 1;
-}
-.chart-axis {
-  fill: var(--muted);
-  font-size: 11px;
-  font-variant-numeric: tabular-nums;
-}
-.chart-line {
-  fill: none;
-  stroke: var(--chart-series);
-  stroke-width: 2;
-  stroke-linejoin: round;
-  stroke-linecap: round;
-}
-.chart-reference {
-  stroke: var(--text-2);
-  stroke-width: 1;
-}
-.chart-reference-label {
-  fill: var(--text-2);
-  font-size: 11px;
-  font-weight: 700;
-}
-.chart-selected-rule {
-  stroke: var(--line-strong);
-  stroke-width: 6;
-  opacity: 0.6;
-}
-.chart-crosshair {
-  stroke: var(--muted);
-  stroke-width: 1;
-}
-.chart-dot {
-  fill: var(--chart-series);
-  stroke: var(--surface);
-  stroke-width: 2;
-}
-.chart-dot.is-selected {
-  fill: var(--surface);
-  stroke: var(--chart-series);
-  stroke-width: 3;
-}
-.chart-tooltip {
-  position: absolute;
-  z-index: 5;
-  min-width: 150px;
-  padding: 10px 12px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius-item);
-  background: var(--surface);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  font-size: 12px;
-  pointer-events: none;
-}
-.chart-tooltip dl {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2px 12px;
-  margin: 6px 0 0;
-}
-.chart-tooltip dt {
-  color: var(--muted);
-}
-.chart-tooltip dd {
-  margin: 0;
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  font-weight: 700;
 }
 /*
  * 넓은 화면: 표가 패널 안에 다 들어가므로 바깥 스크롤 컨테이너를 두지 않고,
