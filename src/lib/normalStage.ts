@@ -34,16 +34,6 @@ export const EMPTY_FORM: NormalStageForm = {
   debuffRate: '10000',
 }
 
-/** "예시 넣기" 버튼 값 */
-export const EXAMPLE_FORM: NormalStageForm = {
-  ch: '114',
-  st: '22',
-  cpM: '105',
-  accuracy: '',
-  focus: '',
-  debuffRate: '10000',
-}
-
 /** ?demo=1 / ?fill=1 로 열었을 때 채우는 값 */
 export const DEMO_FORM: NormalStageForm = {
   ch: '114',

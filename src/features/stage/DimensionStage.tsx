@@ -16,7 +16,6 @@ interface DimensionForm {
 
 const STORAGE_KEY = `crumble.dimension.season-${DIMENSION_SEASON}`
 const EMPTY: DimensionForm = { stage: '1', power: '', level: '1' }
-const EXAMPLE: DimensionForm = { stage: '10', power: '30000', level: '10' }
 const QUICK_STAGES = [1, 10, 25, 50, 100] as const
 
 /** 목표 단계·레벨은 시즌별로 저장하고, 팀 전투력은 일반 스테이지와 같이 쓰는 값을 우선한다. */
@@ -120,18 +119,14 @@ export function DimensionStage() {
   const { locale } = useI18n()
   const l = <T,>(ko: T, en: T, ja: T) => pick(locale, ko, en, ja)
   const [form, setForm] = useState<DimensionForm>(loadForm)
-  const [exampleMode, setExampleMode] = useState(false)
   const { data, isError } = useQuery(dimensionQuery)
 
   useEffect(() => {
-    // 예시 값은 저장하지 않는다.
-    if (exampleMode) return
     writeStorage(STORAGE_KEY, JSON.stringify({ ...form, unit: 'M' }))
     writeTeamPower(form.power)
-  }, [form, exampleMode])
+  }, [form])
 
   const update = (key: keyof DimensionForm, value: string) => {
-    setExampleMode(false)
     setForm((prev) => ({ ...prev, [key]: value }))
   }
 
@@ -160,16 +155,6 @@ export function DimensionStage() {
             )}
           </p>
         </div>
-        <button
-          type="button"
-          className="text-button"
-          onClick={() => {
-            setExampleMode(true)
-            setForm(EXAMPLE)
-          }}
-        >
-          {l('예시 넣기', 'Try example', '入力例')}
-        </button>
       </div>
 
       <section className="panel dimension-input-panel">
@@ -267,12 +252,10 @@ export function DimensionStage() {
               )}
             </p>
             <div className="form-actions">
-              {exampleMode && <span className="example-tag">{l('예시 값', 'Example values', '入力例')}</span>}
               <button
                 type="button"
                 className="text-button"
                 onClick={() => {
-                  setExampleMode(false)
                   setForm(EMPTY)
                 }}
               >

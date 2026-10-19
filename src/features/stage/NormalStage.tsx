@@ -9,7 +9,6 @@ import {
   DEBUFF_RATE_OPTIONS,
   DEMO_FORM,
   EMPTY_FORM,
-  EXAMPLE_FORM,
   MAX_CHAPTER,
   STAGES_PER_CHAPTER,
   canShiftStage,
@@ -240,7 +239,6 @@ export function NormalStage() {
     const sharedPower = readTeamPower()
     return sharedPower === null ? saved : { ...saved, cpM: sharedPower }
   })
-  const [exampleMode, setExampleMode] = useState(false)
   const contextRef = useRef<HTMLDivElement>(null)
   const powerInputRef = useRef<HTMLInputElement>(null)
   // 팀 전투력 입력은 기본으로 접어 두고, 펼친 상태는 다음 접속에도 유지한다.
@@ -256,20 +254,33 @@ export function NormalStage() {
 
   // 예시 값이나 ?demo 링크로 채운 값은 저장하지 않는다.
   useEffect(() => {
-    if (demoMode || exampleMode) return
+    // ?demo=1 링크로 채운 값은 저장하지 않는다.
+    if (demoMode) return
     writeStorage(FORM_KEY, JSON.stringify(form))
     writeTeamPower(form.cpM)
-  }, [form, demoMode, exampleMode])
+  }, [form, demoMode])
 
+  // 챕터 전체 보기가 기본이고, 마지막으로 고른 보기를 기억한다.
+  const [view, setView] = useState<'range' | 'chapter'>(() => (readStorage(VIEW_KEY) === 'range' ? 'range' : 'chapter'))
+  const changeView = (next: 'range' | 'chapter') => {
+    setView(next)
+    writeStorage(VIEW_KEY, next)
+  }
+
+  // 챕터 전체 보기에서는 챕터만 골라도 된다. 스테이지가 비어 있으면 "함께 입력" 오류 대신
+  // 스테이지 없이 계산해서(전투력 기준 결과만) 나머지 화면이 빈 안내 상태로 남게 한다.
+  const chapterOnly = view === 'chapter' && form.ch !== '' && form.st === ''
   const outcome = useMemo(
-    () => (stages.data ? computeNormalStage(stages.data, form, locale) : null),
-    [stages.data, form, locale],
+    () =>
+      stages.data
+        ? computeNormalStage(stages.data, chapterOnly ? { ...form, ch: '', st: '' } : form, locale)
+        : null,
+    [stages.data, form, locale, chapterOnly],
   )
   const result = outcome && outcome.error === null ? outcome : null
   const errorMessage = outcome?.error ?? null
 
   const update = (key: keyof NormalStageForm, value: string) => {
-    setExampleMode(false)
     setForm((prev) => ({ ...prev, [key]: value }))
   }
 
@@ -284,12 +295,6 @@ export function NormalStage() {
     })
   }, [stages.data, chapterNo, locale])
 
-  // 도전 범위 표와 챕터 전체 보기 중 마지막으로 고른 보기를 기억한다.
-  const [view, setView] = useState<'range' | 'chapter'>(() => (readStorage(VIEW_KEY) === 'chapter' ? 'chapter' : 'range'))
-  const changeView = (next: 'range' | 'chapter') => {
-    setView(next)
-    writeStorage(VIEW_KEY, next)
-  }
   const chapterValid = Number.isInteger(chapterNo) && chapterNo >= 1 && chapterNo <= MAX_CHAPTER
   // 챕터만 고른 상태(스테이지 미입력)에서도 그래프에 내 전투력을 그리도록 입력값에서 바로 읽는다.
   const cpMValue = Number(form.cpM)
@@ -316,7 +321,6 @@ export function NormalStage() {
     position.st <= STAGES_PER_CHAPTER
 
   const goToStage = (pos: StagePos, scroll = false) => {
-    setExampleMode(false)
     setForm((prev) => ({ ...prev, ch: String(pos.ch), st: String(pos.st) }))
     if (scroll) contextRef.current?.scrollIntoView({ block: 'start', behavior: 'smooth' })
   }
@@ -343,16 +347,6 @@ export function NormalStage() {
           <h2>{t('얼마나 더 올려야 할까요?')}</h2>
           <p>{t('목표 스테이지의 부족한 전투력·명중과 내 전투력의 도전 범위를 확인하세요.')}</p>
         </div>
-        <button
-          type="button"
-          className="text-button"
-          onClick={() => {
-            setExampleMode(true)
-            setForm({ ...EXAMPLE_FORM })
-          }}
-        >
-          {t('예시 넣기')}
-        </button>
       </div>
 
       <form
@@ -362,7 +356,6 @@ export function NormalStage() {
         onSubmit={(e) => e.preventDefault()}
         onReset={(e) => {
           e.preventDefault()
-          setExampleMode(false)
           setForm({ ...EMPTY_FORM })
         }}
       >
@@ -413,7 +406,7 @@ export function NormalStage() {
           </fieldset>
 
           <div className="form-actions">
-            {(exampleMode || demoMode) && <span className="example-tag">{t('예시 값')}</span>}
+            {demoMode && <span className="example-tag">{t('예시 값')}</span>}
             <button type="reset" className="text-button">
               {t('초기화')}
             </button>
@@ -496,42 +489,6 @@ export function NormalStage() {
 
         {result?.row && <BandPowerStrip result={result} t={t} locale={locale} />}
 
-        <div className="primary-checks">
-          <section className="check-card power-card" aria-labelledby="power-title">
-            <h3 id="power-title">{t('내 피해 구간과 다음 목표')}</h3>
-            <div id="power-output" aria-live="polite">
-              {result ? <PowerOutput result={result} t={t} locale={locale} /> : placeholder}
-            </div>
-          </section>
-
-          <section className="check-card" aria-labelledby="accuracy-title">
-            <h3 id="accuracy-title">{t('빗나가지 않으려면 명중은?')}</h3>
-            <div id="accuracy-output" aria-live="polite">
-              {result ? (
-                <StatOutput kind="accuracy" result={result} debuffRate={form.debuffRate} t={t} locale={locale} />
-              ) : (
-                placeholder
-              )}
-            </div>
-            <label className="inline-stat" htmlFor="accuracy">
-              <span>
-                {t('내 쿠키 명중')} <small>{t('부족분 비교용')}</small>
-              </span>
-              <input
-                id="accuracy"
-                type="number"
-                min="0"
-                step="any"
-                inputMode="decimal"
-                placeholder={t('선택 입력')}
-                value={form.accuracy}
-                onChange={(e) => update('accuracy', e.target.value)}
-              />
-            </label>
-            <p className="field-hint">{t('딜러 한 명의 명중입니다. 별도 명중률 보정·동행 펫은 미포함.')}</p>
-          </section>
-        </div>
-
         <section className="panel reach-section" aria-labelledby="reach-title">
           <div className="section-heading with-toggle">
             <div>
@@ -552,11 +509,11 @@ export function NormalStage() {
               </p>
             </div>
             <div className="view-toggle" role="group" aria-label={pick(locale, '보기 방식', 'View', '表示方法')}>
-              <button type="button" aria-pressed={view === 'range'} onClick={() => changeView('range')}>
-                {pick(locale, '도전 범위', 'Reach', '挑戦範囲')}
-              </button>
               <button type="button" aria-pressed={view === 'chapter'} onClick={() => changeView('chapter')}>
                 {pick(locale, '챕터 전체', 'Whole chapter', 'チャプター全体')}
+              </button>
+              <button type="button" aria-pressed={view === 'range'} onClick={() => changeView('range')}>
+                {pick(locale, '도전 범위', 'Reach', '挑戦範囲')}
               </button>
             </div>
           </div>
@@ -722,6 +679,42 @@ export function NormalStage() {
           </>
           )}
         </section>
+
+        <div className="primary-checks">
+          <section className="check-card power-card" aria-labelledby="power-title">
+            <h3 id="power-title">{t('내 피해 구간과 다음 목표')}</h3>
+            <div id="power-output" aria-live="polite">
+              {result ? <PowerOutput result={result} t={t} locale={locale} /> : placeholder}
+            </div>
+          </section>
+
+          <section className="check-card" aria-labelledby="accuracy-title">
+            <h3 id="accuracy-title">{t('빗나가지 않으려면 명중은?')}</h3>
+            <div id="accuracy-output" aria-live="polite">
+              {result ? (
+                <StatOutput kind="accuracy" result={result} debuffRate={form.debuffRate} t={t} locale={locale} />
+              ) : (
+                placeholder
+              )}
+            </div>
+            <label className="inline-stat" htmlFor="accuracy">
+              <span>
+                {t('내 쿠키 명중')} <small>{t('부족분 비교용')}</small>
+              </span>
+              <input
+                id="accuracy"
+                type="number"
+                min="0"
+                step="any"
+                inputMode="decimal"
+                placeholder={t('선택 입력')}
+                value={form.accuracy}
+                onChange={(e) => update('accuracy', e.target.value)}
+              />
+            </label>
+            <p className="field-hint">{t('딜러 한 명의 명중입니다. 별도 명중률 보정·동행 펫은 미포함.')}</p>
+          </section>
+        </div>
 
         <section className="panel focus-section" aria-labelledby="focus-title">
           <div className="section-heading">
