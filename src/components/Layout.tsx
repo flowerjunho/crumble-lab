@@ -1,9 +1,10 @@
 import { useEffect, type ReactNode } from 'react'
-import { Link, NavLink } from 'react-router'
+import { Link, NavLink, useLocation } from 'react-router'
 import { useQuery } from '@tanstack/react-query'
 import { LOCALES, useI18n } from '../i18n'
 import { cookiesQuery, stagesQuery } from '../api/queries'
-import { ROUTES } from '../routes'
+import { ROUTES, STAGE_MODE_KEY } from '../routes'
+import { readStorage } from '../lib/storage'
 import { Logo } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
 import type { Locale } from '../types'
@@ -56,6 +57,17 @@ const PAGE_TITLES: Record<Page, string> = {
 export function Layout({ page, children }: { page: Page; children: ReactNode }) {
   const { t, locale, setLocale } = useI18n()
   const version = useGameVersion(page)
+  const { pathname } = useLocation()
+  // 스테이지 탭은 마지막으로 본 화면(일반/차원의 이면)으로 열고, 두 경로 모두에서 선택 상태로 둔다.
+  // 스테이지 화면에 있을 때는 현재 경로를 그대로 쓴다(저장값은 렌더가 끝난 뒤에 갱신되기 때문).
+  const onStage = pathname === ROUTES.stage || pathname.startsWith(`${ROUTES.stage}/`)
+  const stageHref = onStage
+    ? pathname === ROUTES.dimension
+      ? ROUTES.dimension
+      : ROUTES.stage
+    : readStorage(STAGE_MODE_KEY) === 'dimension'
+      ? ROUTES.dimension
+      : ROUTES.stage
 
   useEffect(() => {
     document.title =
@@ -74,7 +86,7 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
 
           {/* 데스크톱에서는 헤더 가운데 알약 모양, 모바일에서는 화면 아래 고정 탭바가 된다. */}
           <nav className="tool-tabs" aria-label={t('크럼블 도구')}>
-            <NavLink to={ROUTES.stage}>
+            <NavLink to={stageHref} className={() => (onStage ? 'active' : undefined)}>
               <StageIcon />
               <span>{t('스테이지 계산')}</span>
             </NavLink>

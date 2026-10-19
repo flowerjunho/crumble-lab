@@ -15,11 +15,12 @@ npm run dev
 
 ## 주소
 
-- `/stage`: 스테이지 계산(일반 스테이지·차원의 이면)
+- `/stage`: 스테이지 계산 - 일반 스테이지
+- `/stage/dimension`: 스테이지 계산 - 차원의 이면
 - `/recommend`: 추천 슈가룬
 - `/guide`: 크럼블 가이드
 
-예전 주소 `/stage-check`, `/option-consult`로 들어오면 새 주소로 자동으로 넘어갑니다.
+예전 주소 `/stage-check`, `/option-consult`, `?mode=dimension`으로 들어오면 새 주소로 자동으로 넘어갑니다. 상단 "스테이지 계산" 탭은 마지막으로 본 화면(일반/차원의 이면)으로 열립니다.
 
 ## 구조
 

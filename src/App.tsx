@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from 'react-router'
+import { Navigate, Outlet, Route, Routes, useLocation } from 'react-router'
 import { Layout } from './components/Layout'
 import { StageCheckPage } from './features/stage/StageCheckPage'
 import { OptionConsultPage } from './features/runes/OptionConsultPage'
@@ -14,14 +14,18 @@ function RedirectToStageCheck() {
 export function App() {
   return (
     <Routes>
+      {/* 일반·차원의 이면은 Layout을 공유해서 서로 오갈 때 헤더가 다시 그려지지 않게 한다. */}
       <Route
         path={ROUTES.stage}
         element={
           <Layout page="stage">
-            <StageCheckPage />
+            <Outlet />
           </Layout>
         }
-      />
+      >
+        <Route index element={<StageCheckPage mode="normal" />} />
+        <Route path="dimension" element={<StageCheckPage mode="dimension" />} />
+      </Route>
       <Route
         path={ROUTES.recommend}
         element={
