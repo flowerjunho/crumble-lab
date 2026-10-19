@@ -1,0 +1,3085 @@
+{
+ "gameVersion": "1.5.002",
+ "cookies": [
+  {
+   "id": "2009192003",
+   "name": {
+    "ko": "샤르도네맛 쿠키",
+    "en": "Chardonnay Cookie",
+    "ja": "シャルドネ味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/2009192003.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2029195681",
+   "name": {
+    "ko": "바리공주맛 쿠키",
+    "en": "Princess Bari Cookie",
+    "ja": "鉢里公主味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/2029195681.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1180029341",
+   "name": {
+    "ko": "감감술래 놀이 달토끼맛 쿠키",
+    "en": "Moon Rabbit Cookie's Pampered with Persimmon",
+    "ja": "柿餅大好き月ウサギ味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1180029341.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1468387800",
+   "name": {
+    "ko": "전갈맛 쿠키",
+    "en": "Scorpion Cookie",
+    "ja": "サソリ味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1468387800.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1651875871",
+   "name": {
+    "ko": "밀키웨이맛 쿠키",
+    "en": "Milky Way Cookie",
+    "ja": "ミルキーウェイ味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1651875871.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "critRate",
+     "label": "치명확률",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1937146299",
+   "name": {
+    "ko": "바삭튼튼 소아과 의사 우유맛 쿠키",
+    "en": "Milk Cookie's Crunchy Strong Pediatrician",
+    "ja": "イキイキ小児科ミルク味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1937146299.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1403888784",
+   "name": {
+    "ko": "브라이트시커 쿠키",
+    "en": "Brightseeker Cookie",
+    "ja": "ブライトシーカークッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1403888784.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1538413492",
+   "name": {
+    "ko": "바람궁수 쿠키",
+    "en": "Wind Archer Cookie",
+    "ja": "ウィンドアーチャークッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1538413492.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1851813779",
+   "name": {
+    "ko": "피노누아맛 쿠키",
+    "en": "Pinot Noir Cookie",
+    "ja": "ピノノワール味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1851813779.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1989880582",
+   "name": {
+    "ko": "석류맛 쿠키",
+    "en": "Pomegranate Cookie",
+    "ja": "ザクロ味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1989880582.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1301864644",
+   "name": {
+    "ko": "다크초코 쿠키",
+    "en": "Dark Choco Cookie",
+    "ja": "ダークチョコクッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1301864644.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1768585886",
+   "name": {
+    "ko": "이름 모를 케이크 들개",
+    "en": "Nameless Cake Hound",
+    "ja": "名もなきわんケーキ"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1768585886.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1349338734",
+   "name": {
+    "ko": "호밀맛 쿠키",
+    "en": "Rye Cookie",
+    "ja": "ライ麦味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1349338734.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "critDamage",
+     "label": "치명피해",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1908042527",
+   "name": {
+    "ko": "허브맛 쿠키",
+    "en": "Herb Cookie",
+    "ja": "ハーブ味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1908042527.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1110671900",
+   "name": {
+    "ko": "마카롱맛 쿠키",
+    "en": "Macaron Cookie",
+    "ja": "マカロン味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1110671900.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": "raid"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1538236697",
+   "name": {
+    "ko": "메론소다맛 쿠키",
+    "en": "Melon Soda Cookie",
+    "ja": "メロンソーダ味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1538236697.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1659683667",
+   "name": {
+    "ko": "딸기크레페맛 쿠키",
+    "en": "Strawberry Crepe Cookie",
+    "ja": "苺クレープ味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1659683667.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1098283564",
+   "name": {
+    "ko": "에스프레소맛 쿠키",
+    "en": "Espresso Cookie",
+    "ja": "エスプレッソ味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1098283564.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2014892077",
+   "name": {
+    "ko": "쿨링민트맛 쿠키",
+    "en": "Cool Mint Cookie",
+    "ja": "クールミント味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/2014892077.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1489876350",
+   "name": {
+    "ko": "피겨여왕맛 쿠키",
+    "en": "Skating Queen Cookie",
+    "ja": "フィギュア味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1489876350.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": "raid"
+    }
+   ]
+  },
+  {
+   "id": "1503701741",
+   "name": {
+    "ko": "치즈케이크맛 쿠키",
+    "en": "Cheesecake Cookie",
+    "ja": "チーズケーキ味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1503701741.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": "raid"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1319033121",
+   "name": {
+    "ko": "도넛행성 에일리언 도넛킹",
+    "en": "Space Doughnut's Royal Excellence",
+    "ja": "ドーナツ惑星スペースドーナツキング"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1319033121.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1866658451",
+   "name": {
+    "ko": "감초맛 쿠키",
+    "en": "Licorice Cookie",
+    "ja": "リコリス味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1866658451.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1398196995",
+   "name": {
+    "ko": "포도넝쿨맛 쿠키",
+    "en": "Grapevine Cookie",
+    "ja": "グレープバイン味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1398196995.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1574807904",
+   "name": {
+    "ko": "이온맛 쿠키로봇",
+    "en": "Ion Cookie Robot",
+    "ja": "イオン味クッキーロボ"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1574807904.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2009816496",
+   "name": {
+    "ko": "정글전사 쿠키",
+    "en": "Tiger Lily Cookie",
+    "ja": "ジャングル戦士クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/2009816496.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1224393054",
+   "name": {
+    "ko": "체리콜라맛 쿠키",
+    "en": "Cherry Cola Cookie",
+    "ja": "チェリーコーラ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1224393054.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1682469993",
+   "name": {
+    "ko": "오븐방랑자 쿠키",
+    "en": "Oven Wanderer Cookie",
+    "ja": "オーブン放浪者クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1682469993.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1344235761",
+   "name": {
+    "ko": "명랑한 쿠키",
+    "en": "GingerBright",
+    "ja": "陽気なクッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1344235761.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1501721031",
+   "name": {
+    "ko": "뱀파이어맛 쿠키",
+    "en": "Vampire Cookie",
+    "ja": "ヴァンパイア味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1501721031.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1513006948",
+   "name": {
+    "ko": "악마맛 쿠키",
+    "en": "Devil Cookie",
+    "ja": "デビル味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1513006948.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1867454349",
+   "name": {
+    "ko": "탐험가맛 쿠키",
+    "en": "Adventurer Cookie",
+    "ja": "探検家味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1867454349.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1447126473",
+   "name": {
+    "ko": "실론나이트 쿠키",
+    "en": "Tea Knight Cookie",
+    "ja": "セイロンナイトクッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1447126473.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": "core"
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1601727854",
+   "name": {
+    "ko": "치약초코 쿠키",
+    "en": "Toothpaste Cookie",
+    "ja": "歯磨きチョコクッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1601727854.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1959838879",
+   "name": {
+    "ko": "라임맛 쿠키",
+    "en": "Lime Cookie",
+    "ja": "ライム味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1959838879.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1336201012",
+   "name": {
+    "ko": "위치베리맛 쿠키",
+    "en": "Witchberry Cookie",
+    "ja": "ウィッチベリー味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1336201012.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1280407413",
+   "name": {
+    "ko": "딸기쇼트케이크맛 쿠키",
+    "en": "Strawberry Shortcake Cookie",
+    "ja": "苺ショートケーキ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1280407413.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2130286463",
+   "name": {
+    "ko": "마들렌맛 쿠키",
+    "en": "Madeleine Cookie",
+    "ja": "マドレーヌ味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/2130286463.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1958579024",
+   "name": {
+    "ko": "락스타맛 쿠키",
+    "en": "Rockstar Cookie",
+    "ja": "ロックスター味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1958579024.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1452632868",
+   "name": {
+    "ko": "오렌지맛 쿠키",
+    "en": "Orange Cookie",
+    "ja": "オレンジ味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1452632868.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1634347329",
+   "name": {
+    "ko": "슈크림맛 쿠키",
+    "en": "Cream Puff Cookie",
+    "ja": "シュークリーム味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1634347329.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1654724917",
+   "name": {
+    "ko": "크림소다맛 쿠키",
+    "en": "Cream Soda Cookie",
+    "ja": "クリームソーダ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1654724917.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1575876951",
+   "name": {
+    "ko": "트위즐젤리맛 쿠키",
+    "en": "Twizzly Gummy Cookie",
+    "ja": "トゥイズルゼリー味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1575876951.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1173302511",
+   "name": {
+    "ko": "찰스",
+    "en": "Schwarzwälder",
+    "ja": "フランソワ"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1173302511.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1657200833",
+   "name": {
+    "ko": "닥터 뼈다귀 쿠키",
+    "en": "Dr. Bones Cookie",
+    "ja": "Dr.ホッネークッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1657200833.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1392268278",
+   "name": {
+    "ko": "레몬맛 쿠키",
+    "en": "Lemon Cookie",
+    "ja": "レモン味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1392268278.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1937785700",
+   "name": {
+    "ko": "팝콘맛 쿠키",
+    "en": "Popcorn Cookie",
+    "ja": "ポップコーン味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1937785700.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1642901720",
+   "name": {
+    "ko": "체리맛 쿠키",
+    "en": "Cherry Cookie",
+    "ja": "チェリー味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1642901720.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1279573902",
+   "name": {
+    "ko": "공주맛 쿠키",
+    "en": "Princess Cookie",
+    "ja": "プリンセス味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1279573902.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2133222060",
+   "name": {
+    "ko": "용사맛 쿠키",
+    "en": "Knight Cookie",
+    "ja": "勇者味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/2133222060.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1156347996",
+   "name": {
+    "ko": "딸기맛 쿠키",
+    "en": "Strawberry Cookie",
+    "ja": "イチゴ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1156347996.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1997954602",
+   "name": {
+    "ko": "설탕노움",
+    "en": "Sugar Gnome",
+    "ja": "シュガーノーム"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1997954602.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1733776347",
+   "name": {
+    "ko": "용감한 쿠키",
+    "en": "GingerBrave",
+    "ja": "勇敢なクッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1733776347.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1830249793",
+   "name": {
+    "ko": "닥터 와사비 쿠키",
+    "en": "Dr. Wasabi Cookie",
+    "ja": "ドクターわさびクッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1830249793.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1825574499",
+   "name": {
+    "ko": "복숭아맛 쿠키",
+    "en": "Peach Cookie",
+    "ja": "ピーチ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1825574499.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1373816704",
+   "name": {
+    "ko": "팬케이크맛 쿠키",
+    "en": "Pancake Cookie",
+    "ja": "パンケーキ味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1373816704.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1273860791",
+   "name": {
+    "ko": "다크체리맛 쿠키",
+    "en": "Dark Cherry Cookie",
+    "ja": "ダークチェリー味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1273860791.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1159974621",
+   "name": {
+    "ko": "독버섯맛 쿠키",
+    "en": "Poison Mushroom Cookie",
+    "ja": "毒マッシュ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1159974621.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1110179047",
+   "name": {
+    "ko": "라일락맛 쿠키",
+    "en": "Lilac Cookie",
+    "ja": "ライラック味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1110179047.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2051399718",
+   "name": {
+    "ko": "블랙베리맛 쿠키",
+    "en": "Blackberry Cookie",
+    "ja": "ブラックベリー味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/2051399718.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1143398648",
+   "name": {
+    "ko": "에일리언 도넛",
+    "en": "Space Doughnut",
+    "ja": "スペースドーナツ"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1143398648.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1914524668",
+   "name": {
+    "ko": "연금술사맛 쿠키",
+    "en": "Alchemist Cookie",
+    "ja": "錬金術師味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1914524668.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1218479743",
+   "name": {
+    "ko": "요거트베리맛 쿠키",
+    "en": "Berry Yogurt Cookie",
+    "ja": "ヨーグルトベリー味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1218479743.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1631310085",
+   "name": {
+    "ko": "일꾼 곰젤리",
+    "en": "Bear Jelly Worker",
+    "ja": "職人くまゼリー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1631310085.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1298137149",
+   "name": {
+    "ko": "코코아맛 쿠키",
+    "en": "Cocoa Cookie",
+    "ja": "ココア味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1298137149.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1418864585",
+   "name": {
+    "ko": "버블껌맛 쿠키",
+    "en": "Gumball Cookie",
+    "ja": "バブルガム味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1418864585.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1170066847",
+   "name": {
+    "ko": "양파맛 쿠키",
+    "en": "Onion Cookie",
+    "ja": "オニオン味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1170066847.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "focusRate",
+     "label": "집중확률",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1084183332",
+   "name": {
+    "ko": "좀비맛 쿠키",
+    "en": "Zombie Cookie",
+    "ja": "ゾンビ味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "풀속성",
+    "en": "Grass",
+    "ja": "草属性"
+   },
+   "image": "/images/cookies/1084183332.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1647356407",
+   "name": {
+    "ko": "천사맛 쿠키",
+    "en": "Angel Cookie",
+    "ja": "エンジェル味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1647356407.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1902094959",
+   "name": {
+    "ko": "치어리더맛 쿠키",
+    "en": "Cheerleader Cookie",
+    "ja": "チアリーダー味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1902094959.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1167251588",
+   "name": {
+    "ko": "커피맛 쿠키",
+    "en": "Coffee Cookie",
+    "ja": "コーヒー味クッキー"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1167251588.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1229712006",
+   "name": {
+    "ko": "홍고추맛 쿠키",
+    "en": "Red Pepper Cookie",
+    "ja": "赤トウガラシ味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "불속성",
+    "en": "Fire",
+    "ja": "火属性"
+   },
+   "image": "/images/cookies/1229712006.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "critRate",
+     "label": "치명확률",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1324907809",
+   "name": {
+    "ko": "근육맛 쿠키",
+    "en": "Muscle Cookie",
+    "ja": "筋肉味クッキー"
+   },
+   "role": {
+    "ko": "방어",
+    "en": "Tank",
+    "ja": "防御"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1324907809.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "healthAmplify",
+     "label": "체력 증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1798661849",
+   "name": {
+    "ko": "닌자맛 쿠키",
+    "en": "Ninja Cookie",
+    "ja": "忍者味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "어둠속성",
+    "en": "Dark",
+    "ja": "闇属性"
+   },
+   "image": "/images/cookies/1798661849.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1788308175",
+   "name": {
+    "ko": "마법사맛 쿠키",
+    "en": "Wizard Cookie",
+    "ja": "魔導士味クッキー"
+   },
+   "role": {
+    "ko": "사격",
+    "en": "Ranged",
+    "ja": "射撃"
+   },
+   "element": {
+    "ko": "빛속성",
+    "en": "Light",
+    "ja": "光属性"
+   },
+   "image": "/images/cookies/1788308175.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "1668210721",
+   "name": {
+    "ko": "보더맛 쿠키",
+    "en": "Skater Cookie",
+    "ja": "スケーター味クッキー"
+   },
+   "role": {
+    "ko": "돌격",
+    "en": "Charge",
+    "ja": "突撃"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/1668210721.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "skillAmplify",
+     "label": "스킬증폭",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  },
+  {
+   "id": "2026678870",
+   "name": {
+    "ko": "블루베리 새",
+    "en": "Blueberry Bird",
+    "ja": "ブルーベリーバード"
+   },
+   "role": {
+    "ko": "지원",
+    "en": "Support",
+    "ja": "支援"
+   },
+   "element": {
+    "ko": "물속성",
+    "en": "Water",
+    "ja": "水属性"
+   },
+   "image": "/images/cookies/2026678870.webp",
+   "pending": false,
+   "options": [
+    {
+     "key": "skillHaste",
+     "label": "스킬가속",
+     "bold": true,
+     "badge": null
+    },
+    {
+     "key": "attackAmplify",
+     "label": "공격력 증폭",
+     "bold": false,
+     "badge": null
+    },
+    {
+     "key": "damageReduction",
+     "label": "피해감소",
+     "bold": false,
+     "badge": null
+    }
+   ]
+  }
+ ]
+}

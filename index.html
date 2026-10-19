@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="icon" type="image/png" href="%BASE_URL%brand/favicon-64.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%brand/apple-touch-icon.png" />
+    <title>쿠키런: 크럼블 · 스테이지 계산</title>
+    <script>
+      // 첫 렌더 전에 테마를 정해 깜빡임을 막는다. 저장값이 없으면 다크가 기본값이다.
+      try {
+        var saved = localStorage.getItem('crumble.theme')
+        document.documentElement.dataset.theme = saved === 'light' ? 'light' : 'dark'
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

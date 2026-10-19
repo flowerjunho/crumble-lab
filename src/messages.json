@@ -1,0 +1,634 @@
+{
+ "쿠키런 크럼블 슈가룬 추천 | 쿠키별 옵션 우선순위": [
+  "CookieRun: Crumble Sugar Rune Recommendations | Cookie Option Priorities",
+  "クッキーラン：クランブル シュガールーンおすすめ | クッキー別優先オプション"
+ ],
+ "쿠키별 슈가룬 추천 옵션 1~3순위와 우선적으로 챙길 옵션을 한눈에 비교하세요. 이름과 역할로 원하는 쿠키를 찾을 수 있습니다.": [
+  "Compare each Cookie’s top three Sugar Rune options and priority picks. Find Cookies by name and role.",
+  "クッキー別シュガールーンのおすすめ1～3位と優先オプションを一覧で比較。名前や役割でクッキーを探せます。"
+ ],
+ "현재 위치": [
+  "Current location",
+  "現在位置"
+ ],
+ "실험소": [
+  "LAB",
+  "実験室"
+ ],
+ "쿠키런: 크럼블": [
+  "CookieRun: Crumble",
+  "クッキーラン：クランブル"
+ ],
+ "계산 · 추천": [
+  "Calculators · Recommendations",
+  "計算・おすすめ"
+ ],
+ "게임": [
+  "Game",
+  "ゲーム"
+ ],
+ "크럼블 도구": [
+  "Crumble tools",
+  "クランブルツール"
+ ],
+ "스테이지 계산": [
+  "Stage calculator",
+  "ステージ計算"
+ ],
+ "추천 슈가룬": [
+  "Recommended Sugar Runes",
+  "おすすめシュガールーン"
+ ],
+ "계산 기준과 게임 가이드": [
+  "Formulas and game guide",
+  "計算基準とゲームガイド"
+ ],
+ "게임에 필요한 계산과 추천을 모았습니다.": [
+  "Calculators and recommendations for your games.",
+  "ゲームに役立つ計算とおすすめをまとめました。"
+ ],
+ "슈가룬 선택부터 다음 스테이지 준비까지.": [
+  "From Sugar Runes to your next stage.",
+  "シュガールーン選びから次のステージの準備まで。"
+ ],
+ "목표 전투력과 내 전투력의 유지 한계.": [
+  "Your next Power target and stage limits.",
+  "目標戦闘力と現在の戦闘力で維持できる範囲。"
+ ],
+ "캐릭터별로 먼저 챙길 옵션 1–3순위.": [
+  "Three recommended options for each Cookie.",
+  "クッキーごとに優先したいオプション1～3位。"
+ ],
+ "전투력 계산하기": [
+  "Calculate Power",
+  "戦闘力を計算"
+ ],
+ "추천 확인하기": [
+  "See recommendations",
+  "おすすめを見る"
+ ],
+ "ALKAPA가 직접 정리하고 만드는 비공식 게임 도구입니다.": [
+  "Unofficial game tools built and maintained by ALKAPA.",
+  "ALKAPAが整理・制作する非公式ゲームツールです。"
+ ],
+ "오류 제보": [
+  "Report an issue",
+  "不具合を報告"
+ ],
+ "먼저 챙길 슈가룬 옵션을 확인하세요.": [
+  "Find which Sugar Rune options to prioritize.",
+  "優先したいシュガールーンのオプションを確認しましょう。"
+ ],
+ "쿠키 이름 검색": [
+  "Search Cookies",
+  "クッキー名で検索"
+ ],
+ "역할 필터": [
+  "Filter by role",
+  "役割で絞り込み"
+ ],
+ "모든 역할": [
+  "All roles",
+  "すべての役割"
+ ],
+ "검색과 필터 초기화": [
+  "Reset search and filters",
+  "検索と絞り込みをリセット"
+ ],
+ "검색 결과 {count}종": [
+  "{count} results",
+  "検索結果 {count}体"
+ ],
+ "전체 {count}종": [
+  "All {count} Cookies",
+  "全{count}体"
+ ],
+ "이용 기록순": [
+  "By usage history",
+  "利用履歴順"
+ ],
+ "신규 쿠키 우선": [
+  "New cookies first",
+  "新クッキー優先"
+ ],
+ "기존 수집 로그와 캐릭터별 검토를 바탕으로 제공하는 기본 추천입니다. 실제 피해 증가와 관계없이 전략적으로 필요한 옵션은 ‘토벌’로 별도 표시합니다.": [
+  "General recommendations based on collected logs and individual Cookie reviews. Options with a strategic role in Raids, regardless of direct damage gains, are marked “Raid”.",
+  "収集済みログとクッキーごとの検討に基づく基本的なおすすめです。実際のダメージ増加とは別に、戦略的に必要なオプションは「討伐」と表示します。"
+ ],
+ "추천 강조와 배지 안내": [
+  "Priority and badge guide",
+  "強調とバッジの説明"
+ ],
+ "굵은 글씨": [
+  "Bold text",
+  "太字"
+ ],
+ "우선적으로 챙길 옵션": [
+  "Prioritize this option",
+  "優先したいオプション"
+ ],
+ "핵심": [
+  "Core",
+  "核心"
+ ],
+ "토벌": [
+  "Raid",
+  "討伐"
+ ],
+ "해당 옵션으로 대부분 세팅": [
+  "Use this option for most slots",
+  "大半をこのオプションで構成"
+ ],
+ "토벌에서 전략적으로 사용되는 옵션": [
+  "An option used strategically in Raids",
+  "討伐で戦略的に使われるオプション"
+ ],
+ "캐릭터별 추천 슈가룬": [
+  "Sugar Rune recommendations by Cookie",
+  "クッキー別おすすめシュガールーン"
+ ],
+ "캐릭터": [
+  "Cookie",
+  "クッキー"
+ ],
+ "{rank}순위": [
+  "Rank {rank}",
+  "{rank}位"
+ ],
+ "검토 중": [
+  "Under review",
+  "検討中"
+ ],
+ "추천 준비 중": [
+  "Recommendations pending",
+  "おすすめ準備中"
+ ],
+ "조건에 맞는 쿠키가 없습니다.": [
+  "No Cookies match your filters.",
+  "条件に合うクッキーがいません。"
+ ],
+ "더 보기": [
+  "Show more",
+  "もっと見る"
+ ],
+ "공격력 증폭": [
+  "ATK Amplification",
+  "攻撃力増幅"
+ ],
+ "스킬가속": [
+  "Skill Haste",
+  "スキル加速"
+ ],
+ "스킬증폭": [
+  "Skill Amplification",
+  "スキル増幅"
+ ],
+ "치명확률": [
+  "CRIT Rate",
+  "会心率"
+ ],
+ "치명피해": [
+  "CRIT DMG",
+  "会心ダメージ"
+ ],
+ "집중확률": [
+  "Focus Rate",
+  "集中確率"
+ ],
+ "피해감소": [
+  "DMG Reduction",
+  "ダメージ軽減"
+ ],
+ "체력 증폭": [
+  "HP Amplification",
+  "体力増幅"
+ ],
+ "공격력": [
+  "ATK",
+  "攻撃力"
+ ],
+ "공격력%": [
+  "ATK %",
+  "攻撃力%"
+ ],
+ "체력%": [
+  "HP %",
+  "体力%"
+ ],
+ "방어력 증폭": [
+  "DEF Amplification",
+  "防御力増幅"
+ ],
+ "치명저항": [
+  "CRIT Resistance",
+  "会心耐性"
+ ],
+ "입력값을 수정하면 결과가 표시됩니다.": [
+  "Correct the input to see results.",
+  "入力値を修正すると結果が表示されます。"
+ ],
+ "스테이지 데이터를 불러오지 못했습니다. 새로고침해 주세요.": [
+  "Could not load stage data. Please refresh.",
+  "ステージデータを取得できませんでした。再読み込みしてください。"
+ ],
+ "스테이지 데이터를 불러오고 있습니다.": [
+  "Loading stage data…",
+  "ステージデータを読み込み中…"
+ ],
+ "주요 피해 구간과 현재·다음 위치": [
+  "Damage tiers, current tier and next target",
+  "主なダメージ区間と現在・次の目標"
+ ],
+ "팀 전투력 {power}부터": [
+  "From {power} team Power",
+  "チーム戦闘力{power}から"
+ ],
+ "현재": [
+  "Current",
+  "現在"
+ ],
+ "다음": [
+  "Next",
+  "次"
+ ],
+ "목표 스테이지를 입력하면 내 피해 구간과 필요한 전투력이 나옵니다.": [
+  "Enter a target stage to see damage tiers and required Power.",
+  "目標ステージを入力すると、ダメージ区間と必要戦闘力が表示されます。"
+ ],
+ "피해 100%에 필요한 팀 전투력": [
+  "Team Power required for 100% damage",
+  "ダメージ100%に必要なチーム戦闘力"
+ ],
+ "내 팀 전투력을 넣으면 현재 구간과 부족분을 비교합니다.": [
+  "Enter your team Power to compare your current tier and shortfall.",
+  "チーム戦闘力を入力すると、現在の区間と不足分を比較できます。"
+ ],
+ "현재 피해": [
+  "Current damage",
+  "現在のダメージ"
+ ],
+ "내 전투력 {power}": [
+  "Your Power: {power}",
+  "現在の戦闘力 {power}"
+ ],
+ "다음 목표": [
+  "Next target",
+  "次の目標"
+ ],
+ "최고 구간 달성": [
+  "Highest tier reached",
+  "最高区間達成"
+ ],
+ "목표 {power}": [
+  "Target: {power}",
+  "目標 {power}"
+ ],
+ "전투력 보너스 최대 적용": [
+  "Maximum Power bonus",
+  "戦闘力ボーナス最大適用"
+ ],
+ "다음 구간까지 더 필요한 전투력": [
+  "Additional Power for the next tier",
+  "次の区間までに必要な追加戦闘力"
+ ],
+ "달성하면 피해": [
+  "Damage at target",
+  "達成時のダメージ"
+ ],
+ "현재 전투력으로 최고 피해 구간을 충족했습니다.": [
+  "Your Power meets the highest damage tier.",
+  "現在の戦闘力は最高ダメージ区間を満たしています。"
+ ],
+ "목표 스테이지를 넣으면 필요한 명중이 나옵니다.": [
+  "Enter a target stage to see required Accuracy.",
+  "目標ステージを入力すると必要命中が表示されます。"
+ ],
+ "목표 스테이지를 입력하면 필요한 집중이 나옵니다.": [
+  "Enter a target stage to see required Focus.",
+  "目標ステージを入力すると必要集中が表示されます。"
+ ],
+ "적중률 100%에 필요한 명중": [
+  "Accuracy required for 100% hit rate",
+  "命中率100%に必要な命中"
+ ],
+ "기본 적용률 {rate} → 적용률 100%에 필요한 집중": [
+  "Base rate {rate} → Focus required for 100% application",
+  "基本適用率{rate} → 適用率100%に必要な集中"
+ ],
+ "지금보다 {value} 더 필요": [
+  "Need {value} more",
+  "あと{value}必要"
+ ],
+ "현재 적중률 {rate}": [
+  "Current hit rate: {rate}",
+  "現在の命中率 {rate}"
+ ],
+ "현재 적용률 {rate}": [
+  "Current application rate: {rate}",
+  "現在の適用率 {rate}"
+ ],
+ "현재 명중으로 충족": [
+  "Your Accuracy meets the target",
+  "現在の命中で達成"
+ ],
+ "현재 집중으로 충족": [
+  "Your Focus meets the target",
+  "現在の集中で達成"
+ ],
+ "내 명중을 넣으면 부족분도 비교합니다.": [
+  "Enter your Accuracy to see the shortfall.",
+  "命中を入力すると不足分も比較できます。"
+ ],
+ "내 집중을 넣으면 부족분도 비교합니다.": [
+  "Enter your Focus to see the shortfall.",
+  "集中を入力すると不足分も比較できます。"
+ ],
+ "얼마나 더 올려야 할까요?": [
+  "How much more do you need?",
+  "あとどれくらい上げればいい？"
+ ],
+ "목표 스테이지의 부족한 전투력·명중과 내 전투력의 도전 범위를 확인하세요.": [
+  "Check your Power and Accuracy shortfalls, and the stages your Power can reach.",
+  "目標ステージまでの戦闘力・命中の不足分と、挑戦できる範囲を確認しましょう。"
+ ],
+ "예시 넣기": [
+  "Try an example",
+  "例を入力"
+ ],
+ "목표 스테이지": [
+  "Target stage",
+  "目標ステージ"
+ ],
+ "이전 스테이지": [
+  "Previous stage",
+  "前のステージ"
+ ],
+ "챕터": [
+  "Chapter",
+  "チャプター"
+ ],
+ "스테이지": [
+  "Stage",
+  "ステージ"
+ ],
+ "다음 스테이지": [
+  "Next stage",
+  "次のステージ"
+ ],
+ "챕터 – 스테이지 · 필요한 전투력과 명중 확인": [
+  "Chapter – Stage · See required Power and Accuracy",
+  "チャプター – ステージ・必要戦闘力と命中を確認"
+ ],
+ "현재 팀 전투력": [
+  "Current team Power",
+  "現在のチーム戦闘力"
+ ],
+ "예: 105": [
+  "e.g. 105",
+  "例：105"
+ ],
+ "편성 화면의 팀 합계 · 1억 = 100M": [
+  "Team total on the formation screen · 100M = 100 million",
+  "編成画面のチーム合計・1億 = 100M"
+ ],
+ "예시 값": [
+  "Example values",
+  "サンプル値"
+ ],
+ "초기화": [
+  "Reset",
+  "リセット"
+ ],
+ "하나만 입력해도 됩니다.": [
+  "Either input works.",
+  "片方だけでも入力できます。"
+ ],
+ "필요 수치": [
+  "Requirements",
+  "必要数値"
+ ],
+ "전투력": [
+  "Power",
+  "戦闘力"
+ ],
+ "도전 범위": [
+  "Stage limits",
+  "挑戦範囲"
+ ],
+ "둘 다": [
+  "Both",
+  "両方"
+ ],
+ "부족분까지": [
+  "Shortfalls too",
+  "不足分も表示"
+ ],
+ "전투력 부족으로 피해 {rate} 감소": [
+  "Low Power reduces damage by {rate}",
+  "戦闘力不足でダメージ{rate}減少"
+ ],
+ "전투력에 따른 피해 감소 없음": [
+  "No Power damage penalty",
+  "戦闘力によるダメージ減少なし"
+ ],
+ "전투력 보너스로 피해 {rate} 증가": [
+  "Power bonus increases damage by {rate}",
+  "戦闘力ボーナスでダメージ{rate}増加"
+ ],
+ "내 피해 구간과 다음 목표": [
+  "Your damage tier and next target",
+  "現在のダメージ区間と次の目標"
+ ],
+ "빗나가지 않으려면 명중은?": [
+  "How much Accuracy to avoid misses?",
+  "ミスを防ぐには命中がいくつ必要？"
+ ],
+ "내 쿠키 명중": [
+  "Your Cookie’s Accuracy",
+  "クッキーの命中"
+ ],
+ "부족분 비교용": [
+  "Compare your shortfall",
+  "不足分の比較用"
+ ],
+ "선택 입력": [
+  "Optional",
+  "任意入力"
+ ],
+ "딜러 한 명의 명중입니다. 별도 명중률 보정·동행 펫은 미포함.": [
+  "Accuracy of one damage dealer. Additional hit-rate modifiers and companion pets are excluded.",
+  "アタッカー1体の命中です。追加の命中率補正・同行ペットは含みません。"
+ ],
+ "이 전투력이면 어디까지 도전할까?": [
+  "How far can this Power take you?",
+  "この戦闘力でどこまで挑戦できる？"
+ ],
+ "현재 전투력으로 각 피해 비율 이상을 유지할 수 있는 마지막 스테이지입니다.": [
+  "The last stage where your Power maintains at least each damage rate.",
+  "現在の戦闘力で各ダメージ比率以上を維持できる最後のステージです。"
+ ],
+ "현재 피해 {rate}가 유지되는 마지막 스테이지": [
+  "Last stage maintaining your current {rate} damage",
+  "現在のダメージ{rate}を維持できる最後のステージ"
+ ],
+ "까지 유지": [
+  "Maintained through here",
+  "まで維持"
+ ],
+ "내 전투력 {power} 기준": [
+  "Based on your {power} Power",
+  "現在の戦闘力{power}基準"
+ ],
+ "{stage}부터 피해가 {rate} 미만으로 내려갑니다.": [
+  "From {stage}, damage falls below {rate}.",
+  "{stage}からダメージが{rate}未満になります。"
+ ],
+ "현재 데이터의 마지막 스테이지까지 유지됩니다.": [
+  "Maintained through the last stage in the current data.",
+  "現在のデータの最終ステージまで維持できます。"
+ ],
+ "피해 55%란?": [
+  "What does 55% damage mean?",
+  "ダメージ55%とは？"
+ ],
+ "전투력 보정 전 피해를 100%로 봤을 때, 실제로 55%가 적용된다는 뜻입니다.": [
+  "With damage before the Power modifier defined as 100%, 55% actually applies.",
+  "戦闘力補正前のダメージを100%としたとき、実際に55%が適用されるという意味です。"
+ ],
+ "전투력별 피해와 도전 범위": [
+  "Damage tiers and stage limits",
+  "戦闘力ごとのダメージと挑戦範囲"
+ ],
+ "적에게 주는 피해": [
+  "Damage dealt",
+  "敵に与えるダメージ"
+ ],
+ "목표 전투력": [
+  "Target Power",
+  "目標戦闘力"
+ ],
+ "{stage} 기준": [
+  "At {stage}",
+  "{stage}基準"
+ ],
+ "스테이지 기준": [
+  "For the target stage",
+  "目標ステージ基準"
+ ],
+ "피해 유지 범위": [
+  "Damage maintained through",
+  "ダメージ維持範囲"
+ ],
+ "내 전투력 기준": [
+  "Based on your Power",
+  "現在の戦闘力基準"
+ ],
+ "피해 감소 없음": [
+  "No damage reduction",
+  "ダメージ減少なし"
+ ],
+ "피해 {rate} 감소": [
+  "{rate} damage reduction",
+  "ダメージ{rate}減少"
+ ],
+ "스테이지 입력 필요": [
+  "Enter a stage",
+  "ステージを入力"
+ ],
+ "전투력 입력 시 부족분 표시": [
+  "Enter Power to see the shortfall",
+  "戦闘力入力で不足分を表示"
+ ],
+ "+{power} 필요": [
+  "Need +{power}",
+  "あと{power}必要"
+ ],
+ "현재 충족": [
+  "Target met",
+  "達成済み"
+ ],
+ "{stage} 스테이지 확인": [
+  "Check stage {stage}",
+  "ステージ{stage}を確認"
+ ],
+ "까지": [
+  "through",
+  "まで"
+ ],
+ "피해 {rate} 이상 유지": [
+  "Maintains at least {rate} damage",
+  "ダメージ{rate}以上を維持"
+ ],
+ "{stage}부터 {rate} 미만": [
+  "Below {rate} from {stage}",
+  "{stage}から{rate}未満"
+ ],
+ "현재 데이터의 마지막 스테이지": [
+  "Last stage in current data",
+  "現在のデータの最終ステージ"
+ ],
+ "팀 전투력 입력 필요": [
+  "Enter team Power",
+  "チーム戦闘力を入力"
+ ],
+ "유지 가능한 구간 없음": [
+  "No stage meets this tier",
+  "維持できる区間なし"
+ ],
+ "스테이지를 누르면 그곳의 필요 전투력과 명중을 확인합니다. 피해 비율은 클리어 확률이 아니며, 실제 클리어는 조합·스킬·생존에 따라 달라집니다.": [
+  "Select a stage to see its required Power and Accuracy. Damage rates are not clear probabilities; clearing also depends on your team, skills and survival.",
+  "ステージを押すと必要戦闘力と命中を確認できます。ダメージ比率はクリア確率ではなく、実際のクリアは編成・スキル・生存力によって変わります。"
+ ],
+ "디버프를 걸려면 집중은?": [
+  "How much Focus to apply debuffs?",
+  "デバフをかけるには集中がいくつ必要？"
+ ],
+ "집중이 필요한 쿠키만 확인하세요. 스킬 설명에 적힌 기본 적용률을 선택합니다.": [
+  "For Cookies that need Focus. Select the base application rate in the skill description.",
+  "集中が必要なクッキーのみ確認してください。スキル説明の基本適用率を選択します。"
+ ],
+ "스킬 기본 디버프 적용률": [
+  "Skill’s base debuff application rate",
+  "スキルの基本デバフ適用率"
+ ],
+ "내 쿠키 집중": [
+  "Your Cookie’s Focus",
+  "クッキーの集中"
+ ],
+ "기본 적용률은 캐릭터·승급에 따라 다릅니다. 별도 집중확률·동행 펫과 상태이상 면역은 미포함. 요구치 경계에는 여유를 두세요.": [
+  "Base rates vary by Cookie and promotion. Additional Focus Rate, companion pets and status immunity are excluded. Allow some margin at thresholds.",
+  "基本適用率はクッキー・昇級によって異なります。追加の集中確率・同行ペット・状態異常免疫は含みません。必要値の境界には余裕を持たせてください。"
+ ],
+ "챕터와 스테이지를 함께 입력해 주세요. 챕터는 1–364, 스테이지는 1–30입니다.": [
+  "Enter both chapter (1–364) and stage (1–30).",
+  "チャプター（1～364）とステージ（1～30）を両方入力してください。"
+ ],
+ "팀 전투력은 0보다 큰 값으로, M 단위로 입력해 주세요.": [
+  "Enter team Power greater than 0 in millions (M).",
+  "チーム戦闘力は0より大きい値をM単位で入力してください。"
+ ],
+ "명중과 집중은 0 이상의 숫자로 입력해 주세요.": [
+  "Accuracy and Focus must be non-negative numbers.",
+  "命中と集中は0以上の数値を入力してください。"
+ ],
+ "해당 스테이지 데이터가 없습니다.": [
+  "No data for this stage.",
+  "該当ステージのデータがありません。"
+ ],
+ "기본 디버프 적용률을 확인해 주세요.": [
+  "Check the base debuff application rate.",
+  "基本デバフ適用率を確認してください。"
+ ],
+ "피해 구간별 권장 전투력": [
+  "Recommended Power by damage band",
+  "ダメージ区分ごとの推奨戦闘力"
+ ],
+ "피해 {rate}": [
+  "Damage {rate}",
+  "ダメージ{rate}"
+ ],
+ "크럼블 가이드": [
+  "Crumble guide",
+  "クランブルガイド"
+ ]
+}

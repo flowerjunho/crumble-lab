@@ -1,0 +1,3433 @@
+{
+    "_meta": {
+        "schemaVersion": 1,
+        "generatedAt": "2026-10-08T12:20:20.723Z",
+        "gameVersion": "1.5.002",
+        "releaseId": "stages-1.5.002-ae3e8b560a47",
+        "dataVersion": "67710a6fa9b6",
+        "source": "game-data-f8f5e8-a3bc4f",
+        "sourceCommit": "a3bc4f89c5e97304ce767485618bd73ff3115ed8",
+        "scope": "normal-stages-and-dimension-season-2",
+        "dimensionSeason": 2,
+        "maxChapter": 364
+    },
+    "season": 2,
+    "stages": [
+        {
+            "stage": 1,
+            "cp": "24202164458",
+            "avoidance": 1204,
+            "resist": 1225,
+            "critRaw": "0",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 2,
+            "cp": "31252185909",
+            "avoidance": 1324,
+            "resist": 1347,
+            "critRaw": "1000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 3,
+            "cp": "38638573313",
+            "avoidance": 1444,
+            "resist": 1470,
+            "critRaw": "2000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 4,
+            "cp": "47022549540",
+            "avoidance": 1565,
+            "resist": 1592,
+            "critRaw": "3000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 5,
+            "cp": "57586201668",
+            "avoidance": 1685,
+            "resist": 1714,
+            "critRaw": "4000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 6,
+            "cp": "68315733750",
+            "avoidance": 1805,
+            "resist": 1836,
+            "critRaw": "5000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 7,
+            "cp": "77268856381",
+            "avoidance": 1926,
+            "resist": 1959,
+            "critRaw": "6000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 8,
+            "cp": "90097172933",
+            "avoidance": 2046,
+            "resist": 2082,
+            "critRaw": "7000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 9,
+            "cp": "102285205870",
+            "avoidance": 2166,
+            "resist": 2204,
+            "critRaw": "8000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 10,
+            "cp": "113447809829",
+            "avoidance": 2287,
+            "resist": 2327,
+            "critRaw": "9000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 11,
+            "cp": "129747527579",
+            "avoidance": 2407,
+            "resist": 2449,
+            "critRaw": "10000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 12,
+            "cp": "142504570401",
+            "avoidance": 2527,
+            "resist": 2571,
+            "critRaw": "11000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 13,
+            "cp": "155858491195",
+            "avoidance": 2648,
+            "resist": 2694,
+            "critRaw": "12000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 14,
+            "cp": "175785785182",
+            "avoidance": 2768,
+            "resist": 2816,
+            "critRaw": "13000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 15,
+            "cp": "190851181808",
+            "avoidance": 2888,
+            "resist": 2939,
+            "critRaw": "14000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 16,
+            "cp": "206540084773",
+            "avoidance": 3009,
+            "resist": 3061,
+            "critRaw": "15000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 17,
+            "cp": "226420032936",
+            "avoidance": 3129,
+            "resist": 3184,
+            "critRaw": "16000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 18,
+            "cp": "247944265122",
+            "avoidance": 3249,
+            "resist": 3306,
+            "critRaw": "17000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 19,
+            "cp": "266110271198",
+            "avoidance": 3370,
+            "resist": 3428,
+            "critRaw": "18000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 20,
+            "cp": "284927234191",
+            "avoidance": 3490,
+            "resist": 3551,
+            "critRaw": "19000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 21,
+            "cp": "309116127666",
+            "avoidance": 3611,
+            "resist": 3672,
+            "critRaw": "20000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 22,
+            "cp": "329551040018",
+            "avoidance": 3731,
+            "resist": 3796,
+            "critRaw": "21000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 23,
+            "cp": "350650972740",
+            "avoidance": 3851,
+            "resist": 3919,
+            "critRaw": "22000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 24,
+            "cp": "372417132543",
+            "avoidance": 3972,
+            "resist": 4040,
+            "critRaw": "23000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 25,
+            "cp": "394850675851",
+            "avoidance": 4092,
+            "resist": 4163,
+            "critRaw": "24000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 26,
+            "cp": "425097721218",
+            "avoidance": 4212,
+            "resist": 4285,
+            "critRaw": "25000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 27,
+            "cp": "456032105631",
+            "avoidance": 4333,
+            "resist": 4408,
+            "critRaw": "26000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 28,
+            "cp": "481265994507",
+            "avoidance": 4453,
+            "resist": 4531,
+            "critRaw": "27000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 29,
+            "cp": "507193217048",
+            "avoidance": 4573,
+            "resist": 4653,
+            "critRaw": "28000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 30,
+            "cp": "533814761652",
+            "avoidance": 4694,
+            "resist": 4776,
+            "critRaw": "29000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 31,
+            "cp": "561131583969",
+            "avoidance": 4814,
+            "resist": 4898,
+            "critRaw": "30000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 32,
+            "cp": "589144609050",
+            "avoidance": 4934,
+            "resist": 5020,
+            "critRaw": "31000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 33,
+            "cp": "617854733312",
+            "avoidance": 5055,
+            "resist": 5142,
+            "critRaw": "32000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 34,
+            "cp": "647262826293",
+            "avoidance": 5175,
+            "resist": 5265,
+            "critRaw": "33000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 35,
+            "cp": "677369732287",
+            "avoidance": 5295,
+            "resist": 5388,
+            "critRaw": "34000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 36,
+            "cp": "708176271811",
+            "avoidance": 5416,
+            "resist": 5510,
+            "critRaw": "35000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 37,
+            "cp": "739683242947",
+            "avoidance": 5536,
+            "resist": 5633,
+            "critRaw": "36000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 38,
+            "cp": "783160506601",
+            "avoidance": 5656,
+            "resist": 5755,
+            "critRaw": "37000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 39,
+            "cp": "816551117075",
+            "avoidance": 5777,
+            "resist": 5877,
+            "critRaw": "38000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 40,
+            "cp": "850654689710",
+            "avoidance": 5897,
+            "resist": 6000,
+            "critRaw": "39000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 41,
+            "cp": "885471954796",
+            "avoidance": 6017,
+            "resist": 6123,
+            "critRaw": "40000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 42,
+            "cp": "921003625239",
+            "avoidance": 6138,
+            "resist": 6245,
+            "critRaw": "41000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 43,
+            "cp": "957250397381",
+            "avoidance": 6258,
+            "resist": 6367,
+            "critRaw": "42000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 44,
+            "cp": "1010647337078",
+            "avoidance": 6379,
+            "resist": 6490,
+            "critRaw": "43000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 45,
+            "cp": "1048949174874",
+            "avoidance": 6498,
+            "resist": 6612,
+            "critRaw": "44000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 46,
+            "cp": "1087979965257",
+            "avoidance": 6619,
+            "resist": 6734,
+            "critRaw": "45000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 47,
+            "cp": "1127740356158",
+            "avoidance": 6740,
+            "resist": 6856,
+            "critRaw": "46000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 48,
+            "cp": "1168230982121",
+            "avoidance": 6859,
+            "resist": 6980,
+            "critRaw": "47000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 49,
+            "cp": "1209452464881",
+            "avoidance": 6980,
+            "resist": 7102,
+            "critRaw": "48000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 50,
+            "cp": "1251405413890",
+            "avoidance": 7101,
+            "resist": 7225,
+            "critRaw": "49000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 51,
+            "cp": "1294090426788",
+            "avoidance": 7220,
+            "resist": 7347,
+            "critRaw": "50000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 52,
+            "cp": "1337508089892",
+            "avoidance": 7341,
+            "resist": 7469,
+            "critRaw": "51000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 53,
+            "cp": "1381658978616",
+            "avoidance": 7462,
+            "resist": 7591,
+            "critRaw": "52000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 54,
+            "cp": "1426543657886",
+            "avoidance": 7581,
+            "resist": 7714,
+            "critRaw": "53000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 55,
+            "cp": "1472162682525",
+            "avoidance": 7702,
+            "resist": 7837,
+            "critRaw": "54000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 56,
+            "cp": "1518516597624",
+            "avoidance": 7823,
+            "resist": 7959,
+            "critRaw": "55000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 57,
+            "cp": "1565605938875",
+            "avoidance": 7943,
+            "resist": 8081,
+            "critRaw": "56000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 58,
+            "cp": "1613431232919",
+            "avoidance": 8063,
+            "resist": 8204,
+            "critRaw": "57000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 59,
+            "cp": "1661992997631",
+            "avoidance": 8184,
+            "resist": 8326,
+            "critRaw": "58000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 60,
+            "cp": "1735566596641",
+            "avoidance": 8304,
+            "resist": 8448,
+            "critRaw": "59000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 61,
+            "cp": "1786312591928",
+            "avoidance": 8425,
+            "resist": 8572,
+            "critRaw": "60000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 62,
+            "cp": "1837807030119",
+            "avoidance": 8545,
+            "resist": 8694,
+            "critRaw": "61000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 63,
+            "cp": "1890050403756",
+            "avoidance": 8665,
+            "resist": 8816,
+            "critRaw": "62000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 64,
+            "cp": "1943043197862",
+            "avoidance": 8786,
+            "resist": 8939,
+            "critRaw": "63000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 65,
+            "cp": "1996785890159",
+            "avoidance": 8906,
+            "resist": 9061,
+            "critRaw": "64000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 66,
+            "cp": "2051278951284",
+            "avoidance": 9026,
+            "resist": 9183,
+            "critRaw": "65000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 67,
+            "cp": "2106522845024",
+            "avoidance": 9147,
+            "resist": 9306,
+            "critRaw": "66000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 68,
+            "cp": "2162518028481",
+            "avoidance": 9267,
+            "resist": 9429,
+            "critRaw": "67000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 69,
+            "cp": "2219264952301",
+            "avoidance": 9387,
+            "resist": 9551,
+            "critRaw": "68000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 70,
+            "cp": "2276764060834",
+            "avoidance": 9508,
+            "resist": 9673,
+            "critRaw": "69000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 71,
+            "cp": "2335015792316",
+            "avoidance": 9628,
+            "resist": 9796,
+            "critRaw": "70000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 72,
+            "cp": "2394020579045",
+            "avoidance": 9748,
+            "resist": 9918,
+            "critRaw": "71000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 73,
+            "cp": "2453778847531",
+            "avoidance": 9869,
+            "resist": 10040,
+            "critRaw": "72000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 74,
+            "cp": "2514291018659",
+            "avoidance": 9989,
+            "resist": 10163,
+            "critRaw": "73000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 75,
+            "cp": "2575557507833",
+            "avoidance": 10109,
+            "resist": 10286,
+            "critRaw": "74000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 76,
+            "cp": "2637578725126",
+            "avoidance": 10230,
+            "resist": 10408,
+            "critRaw": "75000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 77,
+            "cp": "2700355075402",
+            "avoidance": 10350,
+            "resist": 10531,
+            "critRaw": "76000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 78,
+            "cp": "2763886958468",
+            "avoidance": 10470,
+            "resist": 10653,
+            "critRaw": "77000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 79,
+            "cp": "2828174769185",
+            "avoidance": 10591,
+            "resist": 10775,
+            "critRaw": "78000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 80,
+            "cp": "2893218897595",
+            "avoidance": 10711,
+            "resist": 10897,
+            "critRaw": "79000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 81,
+            "cp": "2959019729036",
+            "avoidance": 10831,
+            "resist": 11020,
+            "critRaw": "80000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 82,
+            "cp": "3025577644264",
+            "avoidance": 10952,
+            "resist": 11143,
+            "critRaw": "81000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 83,
+            "cp": "3092893019551",
+            "avoidance": 11072,
+            "resist": 11265,
+            "critRaw": "82000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 84,
+            "cp": "3160966226798",
+            "avoidance": 11193,
+            "resist": 11388,
+            "critRaw": "83000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 85,
+            "cp": "3229797633626",
+            "avoidance": 11313,
+            "resist": 11510,
+            "critRaw": "84000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 86,
+            "cp": "3299387603486",
+            "avoidance": 11433,
+            "resist": 11632,
+            "critRaw": "85000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 87,
+            "cp": "3369736495746",
+            "avoidance": 11554,
+            "resist": 11755,
+            "critRaw": "86000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 88,
+            "cp": "3440844665785",
+            "avoidance": 11674,
+            "resist": 11878,
+            "critRaw": "87000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 89,
+            "cp": "3512712465080",
+            "avoidance": 11794,
+            "resist": 12000,
+            "critRaw": "88000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 90,
+            "cp": "3585340241289",
+            "avoidance": 11915,
+            "resist": 12122,
+            "critRaw": "89000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 91,
+            "cp": "3658728338340",
+            "avoidance": 12035,
+            "resist": 12245,
+            "critRaw": "90000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 92,
+            "cp": "3732877096500",
+            "avoidance": 12155,
+            "resist": 12367,
+            "critRaw": "91000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 93,
+            "cp": "3807786852469",
+            "avoidance": 12276,
+            "resist": 12489,
+            "critRaw": "92000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 94,
+            "cp": "3883457939432",
+            "avoidance": 12396,
+            "resist": 12612,
+            "critRaw": "93000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 95,
+            "cp": "3959890687147",
+            "avoidance": 12516,
+            "resist": 12735,
+            "critRaw": "94000",
+            "enemies": [
+                {
+                    "name": "숙성의 대천사",
+                    "amount": 1,
+                    "names": {
+                        "ko": "숙성의 대천사",
+                        "en": "Well-Aged Archangel",
+                        "ja": "熟成の大天使"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 96,
+            "cp": "4037085422019",
+            "avoidance": 12637,
+            "resist": 12857,
+            "critRaw": "95000",
+            "enemies": [
+                {
+                    "name": "비겁한 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "비겁한 쿠키",
+                        "en": "GingerCraven",
+                        "ja": "卑怯なクッキー"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 97,
+            "cp": "4115042467152",
+            "avoidance": 12757,
+            "resist": 12980,
+            "critRaw": "96000",
+            "enemies": [
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                },
+                {
+                    "name": "케이크 들개떼",
+                    "amount": 10,
+                    "names": {
+                        "ko": "케이크 들개떼",
+                        "en": "Cake Hound Pack",
+                        "ja": "わんケーキの群れ"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 98,
+            "cp": "4193762142424",
+            "avoidance": 12877,
+            "resist": 13102,
+            "critRaw": "97000",
+            "enemies": [
+                {
+                    "name": "쿨링민트맛 쿠키",
+                    "amount": 1,
+                    "names": {
+                        "ko": "쿨링민트맛 쿠키",
+                        "en": "Cool Mint Cookie",
+                        "ja": "クールミント味クッキー"
+                    }
+                },
+                {
+                    "name": "쿨링민트 해골",
+                    "amount": 30,
+                    "names": {
+                        "ko": "쿨링민트 해골",
+                        "en": "Cool Mint Skull",
+                        "ja": "クールミント骸骨"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 99,
+            "cp": "4273244764554",
+            "avoidance": 12997,
+            "resist": 13224,
+            "critRaw": "98000",
+            "enemies": [
+                {
+                    "name": "초코크림 늑대 망치공주",
+                    "amount": 1,
+                    "names": {
+                        "ko": "초코크림 늑대 망치공주",
+                        "en": "Choco Werehound Princess",
+                        "ja": "チョコクリームウルフ姫"
+                    }
+                }
+            ]
+        },
+        {
+            "stage": 100,
+            "cp": "4353490647158",
+            "avoidance": 13118,
+            "resist": 13346,
+            "critRaw": "99000",
+            "enemies": [
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                },
+                {
+                    "name": "폭주단 트럭",
+                    "amount": 1,
+                    "names": {
+                        "ko": "폭주단 트럭",
+                        "en": "Rowdy Truck",
+                        "ja": "暴走団トラック"
+                    }
+                }
+            ]
+        }
+    ],
+    "energy": [
+        {
+            "level": 1,
+            "total": 0
+        },
+        {
+            "level": 2,
+            "total": 30
+        },
+        {
+            "level": 3,
+            "total": 990
+        },
+        {
+            "level": 4,
+            "total": 2520
+        },
+        {
+            "level": 5,
+            "total": 4560
+        },
+        {
+            "level": 6,
+            "total": 7260
+        },
+        {
+            "level": 7,
+            "total": 10680
+        },
+        {
+            "level": 8,
+            "total": 14670
+        },
+        {
+            "level": 9,
+            "total": 19470
+        },
+        {
+            "level": 10,
+            "total": 24870
+        },
+        {
+            "level": 11,
+            "total": 30870
+        },
+        {
+            "level": 12,
+            "total": 38130
+        },
+        {
+            "level": 13,
+            "total": 46050
+        },
+        {
+            "level": 14,
+            "total": 54630
+        },
+        {
+            "level": 15,
+            "total": 64710
+        },
+        {
+            "level": 16,
+            "total": 75510
+        },
+        {
+            "level": 17,
+            "total": 87030
+        },
+        {
+            "level": 18,
+            "total": 99270
+        },
+        {
+            "level": 19,
+            "total": 113310
+        },
+        {
+            "level": 20,
+            "total": 128130
+        },
+        {
+            "level": 21,
+            "total": 143730
+        },
+        {
+            "level": 22,
+            "total": 161370
+        },
+        {
+            "level": 23,
+            "total": 179850
+        },
+        {
+            "level": 24,
+            "total": 199170
+        },
+        {
+            "level": 25,
+            "total": 219330
+        },
+        {
+            "level": 26,
+            "total": 241830
+        },
+        {
+            "level": 27,
+            "total": 265230
+        },
+        {
+            "level": 28,
+            "total": 289530
+        },
+        {
+            "level": 29,
+            "total": 316410
+        },
+        {
+            "level": 30,
+            "total": 344250
+        },
+        {
+            "level": 31,
+            "total": 373050
+        },
+        {
+            "level": 32,
+            "total": 402810
+        },
+        {
+            "level": 33,
+            "total": 435450
+        },
+        {
+            "level": 34,
+            "total": 469110
+        },
+        {
+            "level": 35,
+            "total": 503790
+        },
+        {
+            "level": 36,
+            "total": 539490
+        },
+        {
+            "level": 37,
+            "total": 578370
+        },
+        {
+            "level": 38,
+            "total": 618330
+        },
+        {
+            "level": 39,
+            "total": 659370
+        },
+        {
+            "level": 40,
+            "total": 703830
+        },
+        {
+            "level": 41,
+            "total": 749430
+        },
+        {
+            "level": 42,
+            "total": 796170
+        },
+        {
+            "level": 43,
+            "total": 844050
+        },
+        {
+            "level": 44,
+            "total": 895650
+        },
+        {
+            "level": 45,
+            "total": 948450
+        },
+        {
+            "level": 46,
+            "total": 1002450
+        },
+        {
+            "level": 47,
+            "total": 1060410
+        },
+        {
+            "level": 48,
+            "total": 1119630
+        },
+        {
+            "level": 49,
+            "total": 1180110
+        },
+        {
+            "level": 50,
+            "total": 1241850
+        },
+        {
+            "level": 51,
+            "total": 1307850
+        },
+        {
+            "level": 52,
+            "total": 1375170
+        },
+        {
+            "level": 53,
+            "total": 1443810
+        },
+        {
+            "level": 54,
+            "total": 1516950
+        },
+        {
+            "level": 55,
+            "total": 1591470
+        },
+        {
+            "level": 56,
+            "total": 1667370
+        },
+        {
+            "level": 57,
+            "total": 1744650
+        },
+        {
+            "level": 58,
+            "total": 1826730
+        },
+        {
+            "level": 59,
+            "total": 1910250
+        },
+        {
+            "level": 60,
+            "total": 1995210
+        },
+        {
+            "level": 61,
+            "total": 2085210
+        },
+        {
+            "level": 62,
+            "total": 2176710
+        },
+        {
+            "level": 63,
+            "total": 2269710
+        },
+        {
+            "level": 64,
+            "total": 2364210
+        },
+        {
+            "level": 65,
+            "total": 2464050
+        },
+        {
+            "level": 66,
+            "total": 2565450
+        },
+        {
+            "level": 67,
+            "total": 2668410
+        },
+        {
+            "level": 68,
+            "total": 2776950
+        },
+        {
+            "level": 69,
+            "total": 2887110
+        },
+        {
+            "level": 70,
+            "total": 2998890
+        },
+        {
+            "level": 71,
+            "total": 3112290
+        },
+        {
+            "level": 72,
+            "total": 3231570
+        },
+        {
+            "level": 73,
+            "total": 3352530
+        },
+        {
+            "level": 74,
+            "total": 3475170
+        },
+        {
+            "level": 75,
+            "total": 3599490
+        },
+        {
+            "level": 76,
+            "total": 3729990
+        },
+        {
+            "level": 77,
+            "total": 3862230
+        },
+        {
+            "level": 78,
+            "total": 3996210
+        },
+        {
+            "level": 79,
+            "total": 4136610
+        },
+        {
+            "level": 80,
+            "total": 4278810
+        },
+        {
+            "level": 81,
+            "total": 4422810
+        },
+        {
+            "level": 82,
+            "total": 4568610
+        },
+        {
+            "level": 83,
+            "total": 4721130
+        },
+        {
+            "level": 84,
+            "total": 4875510
+        },
+        {
+            "level": 85,
+            "total": 5031750
+        },
+        {
+            "level": 86,
+            "total": 5194950
+        },
+        {
+            "level": 87,
+            "total": 5360070
+        },
+        {
+            "level": 88,
+            "total": 5527110
+        },
+        {
+            "level": 89,
+            "total": 5696070
+        },
+        {
+            "level": 90,
+            "total": 5872290
+        },
+        {
+            "level": 91,
+            "total": 6050490
+        },
+        {
+            "level": 92,
+            "total": 6230670
+        },
+        {
+            "level": 93,
+            "total": 6418350
+        },
+        {
+            "level": 94,
+            "total": 6608070
+        },
+        {
+            "level": 95,
+            "total": 6799830
+        },
+        {
+            "level": 96,
+            "total": 6993630
+        },
+        {
+            "level": 97,
+            "total": 7195230
+        },
+        {
+            "level": 98,
+            "total": 7398930
+        },
+        {
+            "level": 99,
+            "total": 7604730
+        },
+        {
+            "level": 100,
+            "total": 7818570
+        }
+    ],
+    "rewards": [
+        {
+            "stages": [
+                1
+            ],
+            "perMinute": 1
+        },
+        {
+            "stages": [
+                2
+            ],
+            "perMinute": 2
+        },
+        {
+            "stages": [
+                3
+            ],
+            "perMinute": 3
+        },
+        {
+            "stages": [
+                4
+            ],
+            "perMinute": 4
+        },
+        {
+            "stages": [
+                5
+            ],
+            "perMinute": 5
+        },
+        {
+            "stages": [
+                6
+            ],
+            "perMinute": 6
+        },
+        {
+            "stages": [
+                7
+            ],
+            "perMinute": 7
+        },
+        {
+            "stages": [
+                8
+            ],
+            "perMinute": 8
+        },
+        {
+            "stages": [
+                9
+            ],
+            "perMinute": 9
+        },
+        {
+            "stages": [
+                10
+            ],
+            "perMinute": 10
+        },
+        {
+            "stages": [
+                11
+            ],
+            "perMinute": 11
+        },
+        {
+            "stages": [
+                12
+            ],
+            "perMinute": 12
+        },
+        {
+            "stages": [
+                13
+            ],
+            "perMinute": 13
+        },
+        {
+            "stages": [
+                14
+            ],
+            "perMinute": 14
+        },
+        {
+            "stages": [
+                15
+            ],
+            "perMinute": 15
+        },
+        {
+            "stages": [
+                16
+            ],
+            "perMinute": 16
+        },
+        {
+            "stages": [
+                17
+            ],
+            "perMinute": 17
+        },
+        {
+            "stages": [
+                18
+            ],
+            "perMinute": 18
+        },
+        {
+            "stages": [
+                19
+            ],
+            "perMinute": 19
+        },
+        {
+            "stages": [
+                20
+            ],
+            "perMinute": 20
+        },
+        {
+            "stages": [
+                21
+            ],
+            "perMinute": 21
+        },
+        {
+            "stages": [
+                22
+            ],
+            "perMinute": 22
+        },
+        {
+            "stages": [
+                23
+            ],
+            "perMinute": 23
+        },
+        {
+            "stages": [
+                24
+            ],
+            "perMinute": 24
+        },
+        {
+            "stages": [
+                25
+            ],
+            "perMinute": 25
+        },
+        {
+            "stages": [
+                26
+            ],
+            "perMinute": 26
+        },
+        {
+            "stages": [
+                27
+            ],
+            "perMinute": 27
+        },
+        {
+            "stages": [
+                28
+            ],
+            "perMinute": 28
+        },
+        {
+            "stages": [
+                29
+            ],
+            "perMinute": 29
+        },
+        {
+            "stages": [
+                30
+            ],
+            "perMinute": 30
+        },
+        {
+            "stages": [
+                31
+            ],
+            "perMinute": 31
+        },
+        {
+            "stages": [
+                32
+            ],
+            "perMinute": 32
+        },
+        {
+            "stages": [
+                33
+            ],
+            "perMinute": 33
+        },
+        {
+            "stages": [
+                34
+            ],
+            "perMinute": 34
+        },
+        {
+            "stages": [
+                35
+            ],
+            "perMinute": 35
+        },
+        {
+            "stages": [
+                36
+            ],
+            "perMinute": 36
+        },
+        {
+            "stages": [
+                37
+            ],
+            "perMinute": 37
+        },
+        {
+            "stages": [
+                38
+            ],
+            "perMinute": 38
+        },
+        {
+            "stages": [
+                39
+            ],
+            "perMinute": 39
+        },
+        {
+            "stages": [
+                40
+            ],
+            "perMinute": 40
+        },
+        {
+            "stages": [
+                41
+            ],
+            "perMinute": 41
+        },
+        {
+            "stages": [
+                42
+            ],
+            "perMinute": 42
+        },
+        {
+            "stages": [
+                43
+            ],
+            "perMinute": 43
+        },
+        {
+            "stages": [
+                44
+            ],
+            "perMinute": 44
+        },
+        {
+            "stages": [
+                45
+            ],
+            "perMinute": 45
+        },
+        {
+            "stages": [
+                46
+            ],
+            "perMinute": 46
+        },
+        {
+            "stages": [
+                47
+            ],
+            "perMinute": 47
+        },
+        {
+            "stages": [
+                48
+            ],
+            "perMinute": 48
+        },
+        {
+            "stages": [
+                49
+            ],
+            "perMinute": 49
+        },
+        {
+            "stages": [
+                50
+            ],
+            "perMinute": 50
+        },
+        {
+            "stages": [
+                51
+            ],
+            "perMinute": 51
+        },
+        {
+            "stages": [
+                52
+            ],
+            "perMinute": 52
+        },
+        {
+            "stages": [
+                53
+            ],
+            "perMinute": 53
+        },
+        {
+            "stages": [
+                54
+            ],
+            "perMinute": 54
+        },
+        {
+            "stages": [
+                55
+            ],
+            "perMinute": 55
+        },
+        {
+            "stages": [
+                56
+            ],
+            "perMinute": 56
+        },
+        {
+            "stages": [
+                57
+            ],
+            "perMinute": 57
+        },
+        {
+            "stages": [
+                58
+            ],
+            "perMinute": 58
+        },
+        {
+            "stages": [
+                59
+            ],
+            "perMinute": 59
+        },
+        {
+            "stages": [
+                60
+            ],
+            "perMinute": 60
+        },
+        {
+            "stages": [
+                61
+            ],
+            "perMinute": 61
+        },
+        {
+            "stages": [
+                62
+            ],
+            "perMinute": 62
+        },
+        {
+            "stages": [
+                63
+            ],
+            "perMinute": 63
+        },
+        {
+            "stages": [
+                64
+            ],
+            "perMinute": 64
+        },
+        {
+            "stages": [
+                65
+            ],
+            "perMinute": 65
+        },
+        {
+            "stages": [
+                66
+            ],
+            "perMinute": 66
+        },
+        {
+            "stages": [
+                67
+            ],
+            "perMinute": 67
+        },
+        {
+            "stages": [
+                68
+            ],
+            "perMinute": 68
+        },
+        {
+            "stages": [
+                69
+            ],
+            "perMinute": 69
+        },
+        {
+            "stages": [
+                70
+            ],
+            "perMinute": 70
+        },
+        {
+            "stages": [
+                71
+            ],
+            "perMinute": 71
+        },
+        {
+            "stages": [
+                72
+            ],
+            "perMinute": 72
+        },
+        {
+            "stages": [
+                73
+            ],
+            "perMinute": 73
+        },
+        {
+            "stages": [
+                74
+            ],
+            "perMinute": 74
+        },
+        {
+            "stages": [
+                75
+            ],
+            "perMinute": 75
+        },
+        {
+            "stages": [
+                76
+            ],
+            "perMinute": 76
+        },
+        {
+            "stages": [
+                77
+            ],
+            "perMinute": 77
+        },
+        {
+            "stages": [
+                78
+            ],
+            "perMinute": 78
+        },
+        {
+            "stages": [
+                79
+            ],
+            "perMinute": 79
+        },
+        {
+            "stages": [
+                80
+            ],
+            "perMinute": 80
+        },
+        {
+            "stages": [
+                81
+            ],
+            "perMinute": 81
+        },
+        {
+            "stages": [
+                82
+            ],
+            "perMinute": 82
+        },
+        {
+            "stages": [
+                83
+            ],
+            "perMinute": 83
+        },
+        {
+            "stages": [
+                84
+            ],
+            "perMinute": 84
+        },
+        {
+            "stages": [
+                85
+            ],
+            "perMinute": 85
+        },
+        {
+            "stages": [
+                86
+            ],
+            "perMinute": 86
+        },
+        {
+            "stages": [
+                87
+            ],
+            "perMinute": 87
+        },
+        {
+            "stages": [
+                88
+            ],
+            "perMinute": 88
+        },
+        {
+            "stages": [
+                89
+            ],
+            "perMinute": 89
+        },
+        {
+            "stages": [
+                90
+            ],
+            "perMinute": 90
+        },
+        {
+            "stages": [
+                91
+            ],
+            "perMinute": 91
+        },
+        {
+            "stages": [
+                92
+            ],
+            "perMinute": 92
+        },
+        {
+            "stages": [
+                93
+            ],
+            "perMinute": 93
+        },
+        {
+            "stages": [
+                94
+            ],
+            "perMinute": 94
+        },
+        {
+            "stages": [
+                95
+            ],
+            "perMinute": 95
+        },
+        {
+            "stages": [
+                96
+            ],
+            "perMinute": 96
+        },
+        {
+            "stages": [
+                97
+            ],
+            "perMinute": 97
+        },
+        {
+            "stages": [
+                98
+            ],
+            "perMinute": 98
+        },
+        {
+            "stages": [
+                99
+            ],
+            "perMinute": 99
+        },
+        {
+            "stages": [
+                100
+            ],
+            "perMinute": 100
+        }
+    ]
+}
