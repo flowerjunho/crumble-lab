@@ -12,14 +12,6 @@ export const formatMillionsUnit = (value: number, locale: Locale): string => `${
 /** 명중·집중처럼 정수로 올림해 보여 주는 수치 */
 export const formatCeil = (value: number, locale: Locale): string => Math.ceil(value).toLocaleString(locale)
 
-/** 보스 마리 수: 4마리 / ×4 / 4体 */
-export const formatBossCount = (count: number, locale: Locale): string =>
-  locale === 'ko' ? `${count}마리` : locale === 'ja' ? `${count}体` : `×${count}`
-
-/** 보스 이름 옆에 마리 수를 붙인다. 이름이 없으면 빈 문자열. */
-export const formatBoss = (name: string, count: number | null, locale: Locale): string =>
-  name ? (count ? `${name} ${formatBossCount(count, locale)}` : name) : ''
-
 /** 차원의 이면 표의 전투력(M, 소수 6자리까지) */
 export const formatDimensionMillions = (value: number, locale: Locale): string =>
   (value / 1e6).toLocaleString(locale, { maximumFractionDigits: 6 })

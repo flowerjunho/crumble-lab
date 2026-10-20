@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState, type ReactNode } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { stagesQuery } from '../../api/queries'
 import { pick, useI18n, type Translate } from '../../i18n'
-import { formatBoss, formatCeil, formatMillions, formatMillionsUnit, formatPercent } from '../../lib/format'
+import { formatCeil, formatMillions, formatMillionsUnit, formatPercent } from '../../lib/format'
 import { readStorage, writeStorage } from '../../lib/storage'
 import { readTeamPower, writeTeamPower } from '../../lib/teamPower'
 import {
@@ -290,8 +290,7 @@ export function NormalStage() {
     const data = stages.data
     return STAGE_NUMBERS.map((st) => {
       const row = data?.rows.find((r) => r[0] === chapterNo && r[1] === st)
-      const entry = row && row[5] >= 0 ? data!.bosses[row[5]] : undefined
-      const boss = entry ? formatBoss(localizedText(entry[0], locale), entry[1], locale) : ''
+      const boss = row && row[5] >= 0 ? localizedText(data!.bosses[row[5]]?.[0], locale) : ''
       return { value: st, hint: boss || undefined }
     })
   }, [stages.data, chapterNo, locale])
@@ -471,7 +470,7 @@ export function NormalStage() {
               <b>
                 {result.ch}–{result.st}
               </b>
-              <span>{formatBoss(result.boss ?? '', result.bossCount, locale) || t('목표 스테이지')}</span>
+              <span>{result.boss || t('목표 스테이지')}</span>
               {penalty && (
                 <span className={`damage-status ${penalty.multiplier < 1 ? 'warning' : 'good'}`}>
                   {t(

@@ -1,5 +1,5 @@
 import { pick, useI18n } from '../../i18n'
-import { formatBossCount, formatCeil, formatMillions, formatPercent } from '../../lib/format'
+import { formatCeil, formatMillions, formatPercent } from '../../lib/format'
 import { CHAPTER_BAND_MULTIPLIERS, type ChapterStage } from '../../lib/normalStage'
 
 interface ChapterOverviewProps {
@@ -61,10 +61,7 @@ export function ChapterOverview({ ch, stages, selectedSt, cp, debuffRateBp, onSe
                     {ch}–{s.st}
                   </button>
                 </th>
-                <td className="chapter-boss">
-                  {s.boss}
-                  {s.bossCount !== null && <span className="boss-count">{formatBossCount(s.bossCount, locale)}</span>}
-                </td>
+                <td className="chapter-boss">{s.boss}</td>
                 {s.bands.map((band) => (
                   // 팀 전투력을 넣었으면 이미 들어가는 구간을 표시한다.
                   <td key={band.multiplier} className={cp !== null && cp >= band.power ? 'is-met' : undefined}>
