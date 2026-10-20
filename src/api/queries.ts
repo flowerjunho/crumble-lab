@@ -1,6 +1,10 @@
 import { queryOptions } from '@tanstack/react-query'
 import type { CookiesData, DimensionData, StagesData } from '../types'
 import { asset } from '../lib/asset'
+import { applyBossOverrides, type BossOverrideFile } from '../lib/bossOverrides'
+import bossOverridesJson from '../data/boss-overrides.json'
+
+const bossOverrides: BossOverrideFile = bossOverridesJson
 
 /** 원본이 쓰는 데이터 묶음과 같은 시즌이어야 계산이 맞는다. */
 export const DIMENSION_SEASON = 2
@@ -16,7 +20,13 @@ const STATIC = { staleTime: Infinity, gcTime: Infinity } as const
 
 export const stagesQuery = queryOptions({
   queryKey: ['crumble', 'stages'],
-  queryFn: () => fetchJson<StagesData>(asset('/data/stages.json')),
+  queryFn: async () => {
+    const raw = await fetchJson<StagesData>(asset('/data/stages.json'))
+    // 인게임과 다른 보스는 src/data/boss-overrides.json으로 덮어쓴다.
+    const { data, problems } = applyBossOverrides(raw, bossOverrides)
+    if (problems.length > 0 && import.meta.env.DEV) console.warn('보스 보정 파일에 적용하지 못한 항목이 있습니다.', problems)
+    return data
+  },
   ...STATIC,
 })
 

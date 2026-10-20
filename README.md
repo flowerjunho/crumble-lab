@@ -32,6 +32,18 @@ npm run dev
 - `src/features/guide/guideContent.ts`: 크럼블 가이드 본문(한국어·영어·일본어). 게임 규칙과 공식만 참고하고 설명 문장은 새로 썼습니다.
 - `src/messages.json`: 영어·일본어 번역 사전
 
+## 보스 보정
+
+원본 데이터의 스테이지 보스가 인게임과 다르면 [src/data/boss-overrides.json](src/data/boss-overrides.json)에 항목을 추가합니다.
+
+```json
+{ "stage": "326-10", "boss": "레드베리 암살자", "memo": "인게임 확인 (2026-10-21)" }
+```
+
+- `boss`는 `public/data/stages.json`의 `bosses` 목록에 있는 한국어 이름과 정확히 같아야 합니다. 영어·일본어 이름은 그 목록에서 자동으로 가져옵니다.
+- 바뀌는 것은 보스 이름뿐이고, 필요 전투력·명중·집중 계산은 원본 데이터 그대로입니다.
+- 이름이나 스테이지를 잘못 적으면 `npm test`가 실패하고, 배포 워크플로도 테스트 단계에서 멈춥니다.
+
 ## 배포
 
 `main` 브랜치에 push하면 GitHub Actions([.github/workflows/deploy.yml](.github/workflows/deploy.yml))가 테스트와 빌드를 거쳐 GitHub Pages에 자동으로 배포합니다.
