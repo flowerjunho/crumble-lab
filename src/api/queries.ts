@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { CookiesData, DimensionData, StageBossesData, StagesData } from '../types'
+import type { CookieDb, CookiesData, DimensionData, StageBossesData, StagesData } from '../types'
 import { asset } from '../lib/asset'
 import { applyBossOverrides, type BossOverrideFile } from '../lib/bossOverrides'
 import { mergeStageBosses } from '../lib/stageBosses'
@@ -54,5 +54,12 @@ export const dimensionQuery = queryOptions({
 export const cookiesQuery = queryOptions({
   queryKey: ['crumble', 'cookies'],
   queryFn: () => fetchJson<CookiesData>(asset('/data/cookies.json')),
+  ...STATIC,
+})
+
+/** 쿠키 도감(게임 클라이언트 수치 + 국내 이름·이미지·추천 슈가룬) */
+export const cookieDbQuery = queryOptions({
+  queryKey: ['crumble', 'cookie-db'],
+  queryFn: () => fetchJson<CookieDb>(asset('/data/cookie-db.json')),
   ...STATIC,
 })

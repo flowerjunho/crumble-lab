@@ -1,6 +1,8 @@
 export const ROUTES = {
   stage: '/stage',
   dimension: '/stage/dimension',
+  info: '/info',
+  cookies: '/info/cookies',
   recommend: '/recommend',
   guide: '/guide',
 } as const

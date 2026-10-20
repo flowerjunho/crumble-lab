@@ -9,7 +9,7 @@ import { Logo } from './Logo'
 import { ThemeToggle } from './ThemeToggle'
 import type { Locale } from '../types'
 
-type Page = 'stage' | 'runes' | 'guide'
+type Page = 'stage' | 'info' | 'runes' | 'guide'
 
 /** 깃발이 꽂힌 계단: 스테이지를 하나씩 올라가는 모습 */
 function StageIcon() {
@@ -17,6 +17,18 @@ function StageIcon() {
     <svg className="tab-icon" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M3 21h6v-5h5v-5h6" />
       <path d="M15 11V3l5 2.5L15 8" />
+    </svg>
+  )
+}
+
+/** 쿠키 도감 등 게임 정보: 격자 카드 */
+function InfoIcon() {
+  return (
+    <svg className="tab-icon" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="3.5" y="3.5" width="7" height="7" rx="2" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="2" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="2" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="2" />
     </svg>
   )
 }
@@ -50,6 +62,7 @@ function useGameVersion(page: Page): string {
 
 const PAGE_TITLES: Record<Page, string> = {
   stage: '스테이지 계산',
+  info: '크럼블 정보',
   runes: '추천 슈가룬',
   guide: '크럼블 가이드',
 }
@@ -89,6 +102,10 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
             <NavLink to={stageHref} className={() => (onStage ? 'active' : undefined)}>
               <StageIcon />
               <span>{t('스테이지 계산')}</span>
+            </NavLink>
+            <NavLink to={ROUTES.info}>
+              <InfoIcon />
+              <span>{t('크럼블 정보')}</span>
             </NavLink>
             <NavLink to={ROUTES.recommend}>
               <RuneIcon />

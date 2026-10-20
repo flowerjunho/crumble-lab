@@ -17,6 +17,7 @@ npm run dev
 
 - `/stage`: 스테이지 계산 - 일반 스테이지 (도전 범위 표 / 챕터 30개 스테이지 그래프·표 보기 전환)
 - `/stage/dimension`: 스테이지 계산 - 차원의 이면
+- `/info/cookies`: 크럼블 정보 - 쿠키 도감(`/info/cookies/<slug>`에서 쿠키 상세)
 - `/recommend`: 추천 슈가룬
 - `/guide`: 크럼블 가이드
 
@@ -43,6 +44,12 @@ npm run dev
 ```bash
 node scripts/import-eog-stages.mjs
 ```
+
+## 쿠키 도감 데이터
+
+- `public/data/cookie-db.json`: 쿠키 77종의 능력치·전투 수치·시너지·스킬 피해 모델·스킬 효과. 수치는 EOG.GG가 게임 클라이언트에서 읽은 값이고, 이름(국내 공식 한·영·일)·이미지·추천 슈가룬은 `cookies.json`을 그대로 쓴다. EOG가 쓴 설명문·평가는 넣지 않는다.
+- 시너지 국내 표기(범위·지속·다발·탄속·연타·관통·연쇄)와 쿠키별 주는·받는 시너지는 국내 시너지 도감(설탕노움의 비밀창고)과 테스트로 대조한다.
+- 다시 만들기: `node scripts/import-eog-cookies.mjs`
 
 ## 보스 보정
 

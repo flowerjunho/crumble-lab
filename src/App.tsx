@@ -3,6 +3,9 @@ import { Layout } from './components/Layout'
 import { StageCheckPage } from './features/stage/StageCheckPage'
 import { OptionConsultPage } from './features/runes/OptionConsultPage'
 import { GuidePage } from './features/guide/GuidePage'
+import { InfoSection } from './features/info/InfoSection'
+import { CookieDexPage } from './features/info/CookieDexPage'
+import { CookieDetailPage } from './features/info/CookieDetailPage'
 import { LEGACY_REDIRECTS, ROUTES } from './routes'
 
 /** 예전 주소는 새 주소로, 알 수 없는 주소는 스테이지 계산으로 보낸다. ?demo=1 같은 쿼리는 유지한다. */
@@ -25,6 +28,18 @@ export function App() {
       >
         <Route index element={<StageCheckPage mode="normal" />} />
         <Route path="dimension" element={<StageCheckPage mode="dimension" />} />
+      </Route>
+      <Route
+        path={ROUTES.info}
+        element={
+          <Layout page="info">
+            <InfoSection />
+          </Layout>
+        }
+      >
+        <Route index element={<Navigate to={ROUTES.cookies} replace />} />
+        <Route path="cookies" element={<CookieDexPage />} />
+        <Route path="cookies/:slug" element={<CookieDetailPage />} />
       </Route>
       <Route
         path={ROUTES.recommend}

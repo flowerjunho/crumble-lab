@@ -87,3 +87,84 @@ export interface StageBossesData {
   /** rows[(챕터-1)*30 + (스테이지-1)] = [bosses 인덱스, 마리 수] */
   rows: [bossIndex: number, count: number][]
 }
+
+/** public/data/cookie-db.json: 쿠키 도감 */
+export type CookieRole = 'charge' | 'tank' | 'support' | 'ranged'
+export type CookieElement = 'water' | 'fire' | 'grass' | 'light' | 'dark'
+export type SynergyKey = 'area' | 'dur' | 'burst' | 'speed' | 'hit' | 'pierce' | 'chain'
+
+export interface CookieEffect {
+  kind: string
+  property: string | null
+  calcType: string | null
+  valueBase: string | null
+  value: number | null
+  unit: 'fraction' | 'steps' | 'none'
+  duration: number | null
+  lifetime: 'timed' | 'permanent'
+  maxStack: number
+  applyRate: number
+  target: 'self' | 'ally' | 'allies' | 'enemy' | 'enemies'
+  maxTargets: number | null
+  excludeCaster: boolean
+  tickSeconds: number | null
+  scalesWithSkillAmp: boolean
+  durationScalesWithDurationSynergy: boolean
+  onlyIn: string[] | null
+  category: 'Buff' | 'Debuff' | 'ActionControl'
+}
+
+export interface CookieSkillHit {
+  perHit: number
+  hits: number
+  instances: [number, number]
+  applications: [number, number]
+  coef: [number, number]
+  radius: number | null
+  unlimitedTargets: boolean
+}
+
+export interface CookieSkillPart {
+  cooldown: number
+  effectiveCooldown: number
+  gate: { kind: 'state' | 'charge'; operator: string; value: number } | null
+  coefPerCycle: [number, number]
+  support: boolean
+  hits: CookieSkillHit[]
+}
+
+export interface CookieEntry {
+  eid: string
+  slug: string
+  id: string
+  name: LocalizedText
+  image: string
+  rarity: string
+  role: CookieRole
+  element: CookieElement
+  stats: { power: number | null; atk: number; def: number; hp: number }
+  combat: {
+    range: number
+    moveSpeed: number
+    hitRadius: number
+    targeting: string
+    startCooldownReduction: number
+    knockbackResistance: number
+    airborneResistance: number
+  }
+  synergy: { gives: SynergyKey[]; receives: SynergyKey[] }
+  skill: {
+    nameEn: string | null
+    cycleSeconds: number
+    coefPerCycle: [number, number]
+    atkPerSecond: [number, number]
+    parts: CookieSkillPart[]
+  }
+  effects: CookieEffect[]
+  runes: RuneOption[]
+}
+
+export interface CookieDb {
+  _meta: { source: string; sourceFile: string; fetchedAt: string; note: string }
+  cookies: CookieEntry[]
+}
