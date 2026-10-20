@@ -56,12 +56,34 @@ describe('쿠키 도감 데이터', () => {
     }
   })
 
+  // 국내 스킬 이름(나무위키 크럼블 항목과 일치하는 것으로 확인한 예)
+  it('국내 스킬 이름이 77종 모두 있다', () => {
+    for (const cookie of db.cookies) expect(cookie.skill.nameKo, cookie.name.ko).toBeTruthy()
+    expect(byKo.get('피노누아맛 쿠키')!.skill.nameKo).toBe('그림자 결속')
+    expect(byKo.get('실론나이트 쿠키')!.skill.nameKo).toBe('전투 지휘')
+    expect(byKo.get('피겨여왕맛 쿠키')!.skill.nameKo).toBe('완벽한 연기')
+  })
+
   it('대표 효과 문장', () => {
     const skating = byKo.get('피겨여왕맛 쿠키')!
     const views = skating.effects.map((e) => describeEffect(e, 'ko'))
     expect(views.map((v) => v.what)).toContain('치명피해 +65%')
-    expect(views.map((v) => v.what)).toContain(`시너지 ${SYNERGY.chain.ko} +2`)
+    expect(views.map((v) => v.what)).toContain(`${SYNERGY.chain.ko} 시너지 +2`)
     expect(views[0]!.details).toContain('스킬증폭 적용')
+  })
+
+  // 국내 인게임 스킬 설명(2026-10-21 대조)에 쓰인 표기
+  it('효과 용어가 국내 인게임 표기를 따른다', () => {
+    const whats = (name: string) => byKo.get(name)!.effects.map((e) => describeEffect(e, 'ko'))
+    expect(whats('바리공주맛 쿠키').map((v) => v.what)).toEqual(expect.arrayContaining(['띄우기 면역', '밀치기 면역', '받는 피해 40% 감소']))
+    expect(whats('샤르도네맛 쿠키').map((v) => v.what)).toContain('밀어내기 저항 +60%')
+    expect(whats('피노누아맛 쿠키').map((v) => v.what)).toEqual(expect.arrayContaining(['띄우기 저항 +35%', '받는 회복량 감소 70%']))
+    expect(whats('뱀파이어맛 쿠키').map((v) => v.what)).toContain('명중률 −45%')
+    expect(whats('복숭아맛 쿠키').map((v) => v.what)).toContain('회피율 +45%')
+    expect(whats('이온맛 쿠키로봇').map((v) => v.what)).toEqual(expect.arrayContaining(['보호막: 시전자 체력의 15%', '변신']))
+    expect(whats('도넛행성 에일리언 도넛킹').map((v) => v.what)).toEqual(expect.arrayContaining(['기절', '변이']))
+    const teaKnight = whats('실론나이트 쿠키').find((v) => v.what.startsWith('보스피해'))!
+    expect(teaKnight.details).toContain('길드 토벌전에서만')
   })
 
   it('검색·필터가 국내 이름과 시너지 방향을 따른다', () => {

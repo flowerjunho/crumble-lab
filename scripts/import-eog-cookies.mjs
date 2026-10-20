@@ -44,6 +44,8 @@ const skills = findLiteral('\\{cookie\\d{4}:\\{eid:"cookie\\d{4}",name:"[^"]+",c
 const effects = findLiteral('\\{cookie\\d{4}:\\[(?:\\]|\\{id:\\d+,effectIndex:)', '스킬 효과')
 
 const ours = JSON.parse(await readFile(join(ROOT, 'public/data/cookies.json'), 'utf8')).cookies
+// 국내 스킬 이름(scripts/import-skill-names-ko.mjs로 만든다)
+const skillNamesKo = JSON.parse(await readFile(join(ROOT, 'src/data/cookie-skill-names-ko.json'), 'utf8')).names
 const oursByKo = new Map(ours.map((cookie) => [cookie.name.ko, cookie]))
 const unitBySlug = new Map(units.map((unit) => [unit.slug, unit]))
 
@@ -59,6 +61,7 @@ const cookies = basics.map((basic) => {
   if (!ROLE[basic.klass] || !ELEMENT[basic.element]) problems.push(`알 수 없는 직업/속성: ${basic.ko} ${basic.klass} ${basic.element}`)
   const skill = skills[unit?.eid]
   if (!skill) problems.push(`스킬 모델이 없는 쿠키: ${basic.ko}`)
+  if (!skillNamesKo[basic.ko]) problems.push(`국내 스킬 이름이 없는 쿠키: ${basic.ko}`)
 
   return {
     eid: unit?.eid ?? null,
@@ -87,6 +90,7 @@ const cookies = basics.map((basic) => {
     },
     synergy: { gives: unit?.grants ?? basic.gives, receives: unit?.synergy ?? basic.receives },
     skill: skill && {
+      nameKo: skillNamesKo[basic.ko] ?? null,
       nameEn: basic.skill?.name ?? null,
       cycleSeconds: skill.cycleSeconds,
       coefPerCycle: [skill.coefPerCycle, skill.coefPerCycleMax],

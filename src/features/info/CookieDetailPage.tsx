@@ -37,7 +37,11 @@ function SkillSection({ cookie, locale }: { cookie: CookieEntry; locale: Locale 
   const transforms = cookie.effects.some((e) => e.kind === 'transform' && e.target === 'self')
   return (
     <section className="panel detail-section" aria-labelledby="skill-title">
-      <h3 id="skill-title">{l('스킬', 'Skill', 'スキル')}</h3>
+      <h3 id="skill-title">
+        {l('스킬', 'Skill', 'スキル')}
+        {/* 국내 스킬 이름. 다른 언어에서는 영어 이름을 쓴다. */}
+        {(locale === 'ko' ? skill.nameKo : skill.nameEn) && <span className="skill-name">{locale === 'ko' ? skill.nameKo : skill.nameEn}</span>}
+      </h3>
       <dl className="detail-stats">
         <div>
           <dt>{l('스킬 주기', 'Skill cycle', 'スキル周期')}</dt>
@@ -197,15 +201,15 @@ export function CookieDetailPage() {
               <dd>{cookie.combat.range}</dd>
             </div>
             <div>
-              <dt>{l('이동 속도', 'Move speed', '移動速度')}</dt>
+              <dt>{l('이동속도', 'Move speed', '移動速度')}</dt>
               <dd>{cookie.combat.moveSpeed}</dd>
             </div>
             <div>
-              <dt>{l('넉백 저항', 'Knockback RES', 'ノックバック耐性')}</dt>
+              <dt>{l('밀어내기 저항', 'Push RES', '押し出し耐性')}</dt>
               <dd>{pct(cookie.combat.knockbackResistance)}</dd>
             </div>
             <div>
-              <dt>{l('에어본 저항', 'Airborne RES', '浮き上がり耐性')}</dt>
+              <dt>{l('띄우기 저항', 'Lift RES', '浮かし耐性')}</dt>
               <dd>{pct(cookie.combat.airborneResistance)}</dd>
             </div>
           </dl>

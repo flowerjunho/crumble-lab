@@ -49,7 +49,9 @@ node scripts/import-eog-stages.mjs
 
 - `public/data/cookie-db.json`: 쿠키 77종의 능력치·전투 수치·시너지·스킬 피해 모델·스킬 효과. 수치는 EOG.GG가 게임 클라이언트에서 읽은 값이고, 이름(국내 공식 한·영·일)·이미지·추천 슈가룬은 `cookies.json`을 그대로 쓴다. EOG가 쓴 설명문·평가는 넣지 않는다.
 - 시너지 국내 표기(범위·지속·다발·탄속·연타·관통·연쇄)와 쿠키별 주는·받는 시너지는 국내 시너지 도감(설탕노움의 비밀창고)과 테스트로 대조한다.
-- 다시 만들기: `node scripts/import-eog-cookies.mjs`
+- 효과·능력치 용어는 국내 인게임 스킬 설명과 대조한 표기를 쓴다(띄우기 저항, 밀어내기 저항, 띄우기/밀치기 면역, 받는 회복량 감소, 명중률, 회피율, 보스피해, 길드 토벌전 등). `크기 증가`·`소환`은 인게임 표기를 찾지 못한 일반 표현이다.
+- `src/data/cookie-skill-names-ko.json`: 쿠키별 국내 스킬 이름(스킬 설명 문구는 저장하지 않는다). `node scripts/import-skill-names-ko.mjs`로 다시 만든다.
+- 다시 만들기: `node scripts/import-skill-names-ko.mjs && node scripts/import-eog-cookies.mjs`
 
 ## 보스 보정
 

@@ -1,8 +1,10 @@
 import type { CookieEffect, CookieElement, CookieRole, Locale, SynergyKey } from '../types'
 
 /**
- * 쿠키 도감에 쓰는 이름표. 시너지·직업·속성·능력치는 국내 표기를 쓴다.
- * 시너지 표기는 국내 커뮤니티 시너지 도감(설탕노움의 비밀창고)과 맞췄다.
+ * 쿠키 도감에 쓰는 이름표. 국내 인게임 표기를 쓴다.
+ * - 시너지: 국내 시너지 도감(설탕노움의 비밀창고)
+ * - 효과·능력치: 국내 인게임 스킬 설명(cookieruncrumble.net 한국어 쿠키 페이지, 나무위키 크럼블 항목)과 대조
+ *   예) 띄우기 저항·밀어내기 저항·띄우기/밀치기 면역·받는 회복량 감소·명중률·회피율·보스피해·길드 토벌전
  */
 type Labels = Record<Locale, string>
 const L = (ko: string, en: string, ja: string): Labels => ({ ko, en, ja })
@@ -44,10 +46,11 @@ const STAT: Record<string, Labels> = {
   critRate: L('치명확률', 'CRIT Rate', '会心率'),
   critDamage: L('치명피해', 'CRIT DMG', '会心ダメージ'),
   skillAmp: L('스킬증폭', 'Skill AMP', 'スキル増幅'),
-  accuracy: L('명중', 'Accuracy', '命中'),
-  avoidance: L('회피', 'Avoidance', '回避'),
+  // 스킬 효과로 바뀌는 것은 명중·회피 수치가 아니라 명중률·회피율이다(인게임 스킬 설명 표기).
+  accuracy: L('명중률', 'Accuracy rate', '命中率'),
+  avoidance: L('회피율', 'Avoidance rate', '回避率'),
   moveSpeed: L('이동 속도', 'Move Speed', '移動速度'),
-  bossDamage: L('보스 피해', 'Boss DMG', 'ボスダメージ'),
+  bossDamage: L('보스피해', 'Boss DMG', 'ボスダメージ'),
   damageTaken: L('받는 피해', 'Damage taken', '被ダメージ'),
 }
 
@@ -57,9 +60,12 @@ const KIND: Record<string, Labels> = {
   transform: L('변이', 'Transform', '変異'),
   transformSelf: L('변신', 'Transform', '変身'),
   shield: L('보호막', 'Shield', 'シールド'),
-  liftResist: L('에어본 저항', 'Lift RES', '浮き上がり耐性'),
-  pushResist: L('넉백 저항', 'Push RES', 'ノックバック耐性'),
-  healReduction: L('회복량 감소', 'Healing reduction', '回復量減少'),
+  liftResist: L('띄우기 저항', 'Lift RES', '浮かし耐性'),
+  pushResist: L('밀어내기 저항', 'Push RES', '押し出し耐性'),
+  liftImmune: L('띄우기 면역', 'Lift immunity', '浮かし免疫'),
+  pushImmune: L('밀치기 면역', 'Push immunity', '押し出し免疫'),
+  healReduction: L('받는 회복량 감소', 'Healing received down', '被回復量減少'),
+  // 아래 두 가지는 인게임 스킬 설명에 따로 적힌 표기를 찾지 못해 일반 표현을 쓴다.
   scale: L('크기 증가', 'Size up', 'サイズ増加'),
   spawner: L('소환', 'Summon', '召喚'),
 }
@@ -67,9 +73,9 @@ const KIND: Record<string, Labels> = {
 const TARGET: Record<CookieEffect['target'], Labels> = {
   self: L('자신', 'Self', '自分'),
   ally: L('아군', 'Ally', '味方'),
-  allies: L('아군 여럿', 'Allies', '味方複数'),
+  allies: L('아군들', 'Allies', '味方たち'),
   enemy: L('적', 'Enemy', '敵'),
-  enemies: L('적 여럿', 'Enemies', '敵複数'),
+  enemies: L('적들', 'Enemies', '敵たち'),
 }
 
 export const TARGETING: Record<string, Labels> = {
@@ -81,7 +87,7 @@ export const TARGETING: Record<string, Labels> = {
 }
 
 const MODE: Record<string, Labels> = {
-  GUILD_RAID: L('길드 레이드', 'Guild Raid', 'ギルドレイド'),
+  GUILD_RAID: L('길드 토벌전', 'Guild Raid', 'ギルド討伐戦'),
 }
 
 export const label = (table: Record<string, Labels>, key: string, locale: Locale): string => table[key]?.[locale] ?? key
@@ -120,7 +126,9 @@ export function describeEffect(effect: CookieEffect, locale: Locale): EffectView
     }
   } else if (effect.kind === 'synergy' && effect.property) {
     const name = label(SYNERGY, effect.property, locale)
-    what = effect.unit === 'steps' ? `${t('시너지', 'Synergy', 'シナジー')} ${name} +${value}` : `${t('시너지', 'Synergy', 'シナジー')} ${name} ${signed(value)}`
+    // 인게임 표기 순서: '연쇄 시너지'
+    const synergyName = t(`${name} 시너지`, `${name} Synergy`, `${name}シナジー`)
+    what = effect.unit === 'steps' ? `${synergyName} +${value}` : `${synergyName} ${signed(value)}`
   } else if (effect.kind === 'dot') {
     const base = effect.valueBase === 'CastersHealthPoint' ? t('시전자 체력', 'caster HP', '発動者のHP') : t('시전자 공격력', 'caster ATK', '発動者の攻撃力')
     const tick = effect.tickSeconds ? t(` (${effect.tickSeconds}초마다)`, ` every ${effect.tickSeconds}s`, `(${effect.tickSeconds}秒ごと)`) : ''
@@ -129,7 +137,8 @@ export function describeEffect(effect: CookieEffect, locale: Locale): EffectView
     const base = effect.valueBase === 'CastersAttackPoint' ? t('시전자 공격력', 'caster ATK', '発動者の攻撃力') : t('시전자 체력', 'caster HP', '発動者のHP')
     what = t(`${label(KIND, 'shield', locale)}: ${base}의 ${pct(value)}`, `${label(KIND, 'shield', locale)}: ${pct(value)} of ${base}`, `${label(KIND, 'shield', locale)}: ${base}の${pct(value)}`)
   } else if (effect.kind === 'liftResist' || effect.kind === 'pushResist') {
-    what = `${label(KIND, effect.kind, locale)} +${pct(value)}`
+    // 100%면 인게임에서 '띄우기와 밀치기 면역'으로 쓴다(바리공주맛 쿠키).
+    what = value >= 1 ? label(KIND, effect.kind === 'liftResist' ? 'liftImmune' : 'pushImmune', locale) : `${label(KIND, effect.kind, locale)} +${pct(value)}`
   } else if (effect.kind === 'healReduction') {
     what = `${label(KIND, effect.kind, locale)} ${pct(value)}`
   } else if (effect.kind === 'scale') {
@@ -150,7 +159,9 @@ export function describeEffect(effect: CookieEffect, locale: Locale): EffectView
   if (effect.durationScalesWithDurationSynergy) details.push(t('지속 시너지로 시간 증가', 'Duration Synergy extends it', '持続シナジーで延長'))
   if (effect.onlyIn?.length) details.push(t(`${effect.onlyIn.map((m) => label(MODE, m, locale)).join('·')}에서만`, `${effect.onlyIn.map((m) => label(MODE, m, locale)).join('/')} only`, `${effect.onlyIn.map((m) => label(MODE, m, locale)).join('・')}のみ`))
 
-  let target = label(TARGET, effect.target, locale)
+  // 인원 제한이 있으면 '아군 최대 2명'처럼 단수형에 인원을 붙인다.
+  const base = effect.maxTargets ? ({ allies: 'ally', enemies: 'enemy' } as const)[effect.target as 'allies' | 'enemies'] ?? effect.target : effect.target
+  let target = label(TARGET, base, locale)
   if (effect.maxTargets === 1 && effect.target !== 'self') target += t(' 1명', ' (1)', '1体')
   else if (effect.maxTargets && effect.target !== 'self') target += t(` 최대 ${effect.maxTargets}명`, ` (up to ${effect.maxTargets})`, `(最大${effect.maxTargets}体)`)
   if (effect.excludeCaster && effect.target !== 'self') target += t(' (자신 제외)', ' (not self)', '(自分を除く)')

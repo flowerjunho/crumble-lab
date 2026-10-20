@@ -2291,3 +2291,11 @@ input::placeholder {
     border-left: 0;
   }
 }
+
+.skill-name {
+  margin-left: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--accent);
+}

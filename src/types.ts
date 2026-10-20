@@ -154,6 +154,7 @@ export interface CookieEntry {
   }
   synergy: { gives: SynergyKey[]; receives: SynergyKey[] }
   skill: {
+    nameKo: string | null
     nameEn: string | null
     cycleSeconds: number
     coefPerCycle: [number, number]
