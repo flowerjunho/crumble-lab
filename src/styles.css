@@ -1858,7 +1858,7 @@ input::placeholder {
 }
 .chapter-table .chapter-boss {
   color: var(--text-2);
-  max-width: 160px;
+  max-width: 230px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -1912,4 +1912,17 @@ input::placeholder {
   .chapter-table tr.is-selected th:first-child {
     background: color-mix(in srgb, var(--accent) 14%, var(--surface));
   }
+}
+
+/* 보스 마리 수 표시 */
+.boss-count {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 700;
+  vertical-align: 1px;
 }

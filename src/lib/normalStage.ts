@@ -117,6 +117,8 @@ export interface NormalStageResult {
   st: number | null
   row: StageRow | null
   boss: string | null
+  /** 보스 마리 수(원본 보스 목록 항목의 두 번째 값) */
+  bossCount: number | null
   /** 팀 전투력(원 단위) */
   cp: number | null
   penalty: PowerPenalty | null
@@ -184,6 +186,7 @@ export function computeNormalStage(data: StagesData, form: NormalStageForm, loca
     st,
     row,
     boss: row && row[5] >= 0 ? localizedText(bossEntry?.[0] ?? '', locale) : null,
+    bossCount: bossEntry?.[1] ?? null,
     cp,
     penalty,
     currentReach:
@@ -249,6 +252,7 @@ export const CHAPTER_BAND_MULTIPLIERS = [0.15, 0.35, 0.55, 0.75, 1] as const
 export interface ChapterStage {
   st: number
   boss: string
+  bossCount: number | null
   /** 피해 100%에 필요한 팀 전투력(원) */
   power: number
   /** 피해 15%·35%·55%·75%·100% 구간에 들어가는 팀 전투력(원), CHAPTER_BAND_MULTIPLIERS 순서 */
@@ -272,6 +276,7 @@ export function computeChapter(
     .map((row) => ({
       st: row[1],
       boss: row[5] >= 0 ? localizedText(data.bosses[row[5]]?.[0] ?? '', options.locale) : '',
+      bossCount: row[5] >= 0 ? (data.bosses[row[5]]?.[1] ?? null) : null,
       power: row[2],
       bands: bands.map((band) => ({ multiplier: band.multiplier, power: Math.ceil(row[2] * band.min) })),
       accuracyNeeded: accuracyNeeded(0, row[3]),
