@@ -79,3 +79,11 @@ export interface StagePos {
   ch: number
   st: number
 }
+
+/** public/data/stage-bosses.json: 스테이지별 보스(게임 클라이언트 기준, EOG.GG 제공) */
+export interface StageBossesData {
+  _meta: { source: string; sourceFile: string; fetchedAt: string; note: string }
+  bosses: LocalizedText[]
+  /** rows[(챕터-1)*30 + (스테이지-1)] = [bosses 인덱스, 마리 수] */
+  rows: [bossIndex: number, count: number][]
+}

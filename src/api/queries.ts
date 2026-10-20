@@ -1,7 +1,8 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { CookiesData, DimensionData, StagesData } from '../types'
+import type { CookiesData, DimensionData, StageBossesData, StagesData } from '../types'
 import { asset } from '../lib/asset'
 import { applyBossOverrides, type BossOverrideFile } from '../lib/bossOverrides'
+import { mergeStageBosses } from '../lib/stageBosses'
 import bossOverridesJson from '../data/boss-overrides.json'
 
 const bossOverrides: BossOverrideFile = bossOverridesJson
@@ -21,9 +22,12 @@ const STATIC = { staleTime: Infinity, gcTime: Infinity } as const
 export const stagesQuery = queryOptions({
   queryKey: ['crumble', 'stages'],
   queryFn: async () => {
-    const raw = await fetchJson<StagesData>(asset('/data/stages.json'))
-    // 인게임과 다른 보스는 src/data/boss-overrides.json으로 덮어쓴다.
-    const { data, problems } = applyBossOverrides(raw, bossOverrides)
+    const [raw, stageBosses] = await Promise.all([
+      fetchJson<StagesData>(asset('/data/stages.json')),
+      fetchJson<StageBossesData>(asset('/data/stage-bosses.json')),
+    ])
+    // 스테이지별 보스는 게임 클라이언트 기준 데이터로 바꾸고, 그래도 다른 곳은 보정 파일로 덮어쓴다.
+    const { data, problems } = applyBossOverrides(mergeStageBosses(raw, stageBosses), bossOverrides)
     if (problems.length > 0 && import.meta.env.DEV) console.warn('보스 보정 파일에 적용하지 못한 항목이 있습니다.', problems)
     return data
   },
