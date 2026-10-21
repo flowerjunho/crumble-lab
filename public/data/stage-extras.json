@@ -1,0 +1,41 @@
+{
+ "_meta": {
+  "source": "https://eog.gg/games/cookierun-crumble/",
+  "sourceFiles": [
+   "crc-now.js"
+  ],
+  "fetchedAt": "2026-10-21",
+  "note": "EOG.GG가 게임 클라이언트에서 읽어 공개한 값. 개발사 공식 데이터가 아니다.",
+  "elementAdvantage": "rows[i]: element가 strongAgainst를 공격하면 피해가 bonusPercent% 늘어난다. weakAgainst는 element를 상대로 유리한 속성이다."
+ },
+ "elementAdvantage": {
+  "bonusPercent": 15,
+  "rows": [
+   {
+    "element": "fire",
+    "strongAgainst": "grass",
+    "weakAgainst": "water"
+   },
+   {
+    "element": "water",
+    "strongAgainst": "fire",
+    "weakAgainst": "grass"
+   },
+   {
+    "element": "grass",
+    "strongAgainst": "water",
+    "weakAgainst": "fire"
+   },
+   {
+    "element": "light",
+    "strongAgainst": "dark",
+    "weakAgainst": "dark"
+   },
+   {
+    "element": "dark",
+    "strongAgainst": "light",
+    "weakAgainst": "light"
+   }
+  ]
+ }
+}

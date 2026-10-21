@@ -1,0 +1,117 @@
+/* 쿠키 성장 탭: 패널 사이 간격과 계산기 입력 배치 */
+.growth {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.growth .panel {
+  min-width: 0;
+}
+.growth .panel > .subtle {
+  margin-bottom: 12px;
+}
+.growth-subhead {
+  margin: 22px 0 8px;
+  font-size: 15px;
+}
+
+/* 쿠키 검색 + 목록 */
+.growth-pick {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 10px;
+  margin: 14px 0;
+}
+.growth-pick select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+}
+
+.growth-controls {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.growth-level {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 14px;
+}
+.growth-level input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.growth-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.growth-field input {
+  width: 76px;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  font-family: var(--font-num);
+}
+.growth-stars button {
+  min-width: 44px;
+}
+.growth-stats {
+  margin-top: 4px;
+}
+.growth-fold {
+  margin-top: 14px;
+}
+.growth-range {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  margin-bottom: 12px;
+}
+
+/* 레벨 표: 120행이라 표 안에서만 세로로 스크롤한다. */
+.growth-table-scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+}
+.growth-table-scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface);
+}
+.growth-table td,
+.growth-table th {
+  font-variant-numeric: tabular-nums;
+}
+.growth-table thead th.growth-group {
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+.growth-table thead tr + tr th {
+  border-top: 0;
+}
+.growth-table tr.growth-mark th,
+.growth-table tr.growth-mark td {
+  background: var(--surface-2);
+}
+.growth-table tr.growth-in th,
+.growth-table tr.growth-in td {
+  background: var(--accent-soft);
+}
+
+@media (max-width: 560px) {
+  .growth-pick {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .growth-level {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+}

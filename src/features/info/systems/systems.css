@@ -1,0 +1,300 @@
+/* 용병단·스텔라 링크·패키지 가치·돌파력(/info/mercenary 등). 색은 전역 토큰만 써서 다크·라이트 테마를 함께 따른다. */
+.systems-page {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.systems-page > .panel {
+  min-width: 0;
+}
+.systems-page .panel > h3 {
+  margin-bottom: 10px;
+}
+.systems-page .panel > .subtle {
+  margin-bottom: 12px;
+}
+.systems-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+.systems-fields label {
+  display: grid;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.systems-fields input,
+.systems-fields select {
+  width: 100%;
+}
+.systems-num {
+  font-variant-numeric: tabular-nums;
+}
+.systems-badge {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.systems-badge.is-on {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.systems-badge.is-off {
+  background: var(--surface-3);
+  color: var(--muted);
+}
+.systems-badge.is-accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* 용병단 */
+.systems-levels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.systems-perks {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.systems-perk {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 4px 10px;
+  align-items: start;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.systems-perk.is-picked {
+  border-color: var(--accent);
+}
+.systems-perk input {
+  margin-top: 3px;
+}
+.systems-perk-text {
+  display: grid;
+  gap: 4px;
+  font-size: 14px;
+}
+.systems-perk-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: center;
+  font-size: 12px;
+  color: var(--muted);
+}
+.systems-lineup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.systems-lineup button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 13px;
+}
+.systems-lineup button[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.systems-add {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+/* 스텔라 링크 */
+.systems-stellar {
+  display: grid;
+  grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+@media (max-width: 760px) {
+  .systems-stellar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.systems-board {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: auto;
+  margin: 0 auto;
+  touch-action: manipulation;
+}
+.systems-board .ring {
+  fill: none;
+  stroke: var(--line-strong);
+}
+.systems-board .face {
+  fill: var(--accent);
+  fill-opacity: 0.18;
+  stroke: none;
+}
+.systems-board .link {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+.systems-board .slot {
+  cursor: pointer;
+}
+.systems-board .slot circle {
+  fill: var(--surface-2);
+  stroke: var(--line-strong);
+  stroke-width: 1.5;
+}
+.systems-board .slot.is-on circle {
+  fill: var(--surface);
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+.systems-board .slot.is-locked circle {
+  fill: var(--next-soft);
+  stroke: var(--next);
+  stroke-width: 2.5;
+}
+.systems-board .slot text {
+  fill: var(--text-2);
+  font-size: 14px;
+  font-weight: 700;
+  text-anchor: middle;
+  dominant-baseline: central;
+  pointer-events: none;
+}
+.systems-board .slot.is-on text {
+  fill: var(--accent);
+}
+.systems-board .slot.is-locked text {
+  fill: var(--next);
+}
+.systems-board .slot:focus-visible {
+  outline: none;
+}
+.systems-board .slot:focus-visible circle {
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+.systems-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+.systems-actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+.systems-actions button[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.systems-meter {
+  display: block;
+  height: 6px;
+  margin-top: 8px;
+  border-radius: 3px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+.systems-meter > span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+/* 패키지 */
+.systems-sort {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.systems-sort[aria-pressed='true'] {
+  color: var(--accent);
+}
+.systems-packages td:first-child,
+.systems-packages th:first-child {
+  white-space: normal;
+  min-width: 180px;
+  text-align: left;
+}
+.systems-packages tr.is-open td {
+  background: var(--surface-2);
+}
+.systems-packages .row-button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.systems-packages .row-button:hover {
+  color: var(--accent);
+}
+.systems-lines {
+  display: grid;
+  gap: 2px;
+  margin: 6px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: var(--text-2);
+}
+.systems-lines .is-skipped {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+/* 돌파력 */
+.systems-pager {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.systems-pager input {
+  width: 96px;
+}
+.systems-resolve tr.is-current td,
+.systems-resolve tr.is-current th {
+  background: var(--accent-soft);
+}

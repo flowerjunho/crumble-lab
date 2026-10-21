@@ -1,0 +1,153 @@
+/* 장비 서브탭(GearPage). 전역 토큰만 쓰고 클래스는 gear- 접두사를 붙인다. */
+.gear-page {
+  display: grid;
+  gap: 16px;
+}
+.gear-panel {
+  min-width: 0;
+}
+.gear-panel h4 {
+  margin: 18px 0 8px;
+  font-size: 15px;
+}
+.gear-panel > .field-note:first-of-type {
+  margin: 0 0 14px;
+}
+.gear-num {
+  font-variant-numeric: tabular-nums;
+}
+/* 줄글이 들어가는 칸은 줄바꿈을 허용하고 왼쪽 정렬한다. */
+.gear-table td.gear-text {
+  min-width: 180px;
+  white-space: normal;
+  text-align: left;
+}
+.gear-table tr.is-current > * {
+  background: var(--accent-soft);
+}
+.gear-table th small,
+.gear-table td small {
+  margin-left: 2px;
+}
+
+/* 오븐 레벨 슬라이더와 등급별 막대 */
+.gear-range {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) 56px;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.gear-range input[type='range'] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.gear-range strong {
+  text-align: right;
+  font-family: var(--font-num);
+}
+.gear-summary {
+  margin-bottom: 14px;
+}
+.gear-summary dd small {
+  font-size: 13px;
+  color: var(--muted);
+}
+.gear-odds {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gear-odds li {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr) 72px;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+.gear-odds li.is-off {
+  color: var(--muted);
+}
+.gear-odds li > span:last-child {
+  text-align: right;
+}
+.gear-odds-track {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+.gear-odds-track > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--accent);
+  transition: width 0.16s ease;
+}
+.gear-details {
+  margin-top: 16px;
+}
+.gear-details summary {
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.gear-group-slots {
+  margin: 8px 0;
+}
+
+/* 플레이트 계산기 */
+.gear-calc {
+  margin-top: 16px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.gear-calc h4 {
+  margin-top: 0;
+}
+.gear-calc .detail-stats > div {
+  background: var(--surface);
+}
+.gear-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.gear-fields label {
+  display: grid;
+  gap: 4px;
+}
+.gear-fields input[type='number'] {
+  height: 42px;
+}
+.gear-fields select {
+  width: 100%;
+  height: 42px;
+}
+.gear-toggles {
+  margin-bottom: 12px;
+}
+
+.gear-rune-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 640px) {
+  .gear-rune-grid {
+    grid-template-columns: 1fr;
+  }
+  .gear-range {
+    grid-template-columns: minmax(0, 1fr) 56px;
+  }
+  .gear-range .filter-label {
+    grid-column: 1 / -1;
+  }
+}

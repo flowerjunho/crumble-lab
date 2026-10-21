@@ -8,6 +8,7 @@ import { CookieDexPage } from './features/info/CookieDexPage'
 import { CookieDetailPage } from './features/info/CookieDetailPage'
 import { PetDexPage } from './features/info/PetDexPage'
 import { PetDetailPage } from './features/info/PetDetailPage'
+import { INFO_TABS } from './features/info/infoTabs'
 import { LEGACY_REDIRECTS, ROUTES } from './routes'
 
 /** 예전 주소는 새 주소로, 알 수 없는 주소는 스테이지 계산으로 보낸다. ?demo=1 같은 쿼리는 유지한다. */
@@ -44,6 +45,7 @@ export function App() {
         <Route path="cookies/:slug" element={<CookieDetailPage />} />
         <Route path="pets" element={<PetDexPage />} />
         <Route path="pets/:slug" element={<PetDetailPage />} />
+        {INFO_TABS.map(({ path, page: Page }) => Page && <Route key={path} path={path} element={<Page />} />)}
       </Route>
       <Route
         path={ROUTES.recommend}

@@ -1,0 +1,299 @@
+/* 티어·추천 편성·개요·업데이트 일정 화면 */
+.analysis {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.analysis .panel {
+  min-width: 0;
+}
+.analysis .panel > h3 {
+  margin-bottom: 6px;
+}
+.analysis .panel > .subtle {
+  margin-bottom: 12px;
+}
+.analysis-subhead {
+  margin: 18px 0 8px;
+  font-size: 14px;
+}
+
+/* 기준 육성 칩 */
+.analysis-build {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+/* 순위 종류 탭 */
+.analysis-tabs {
+  flex-wrap: wrap;
+}
+
+/* 계산 방법 접기 상자 */
+.analysis-method {
+  margin: 8px 0 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.analysis-method summary {
+  cursor: pointer;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.analysis-method-body {
+  display: grid;
+  gap: 8px;
+  padding: 0 12px 12px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+.analysis-method-body ol {
+  display: grid;
+  gap: 6px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* 표 */
+.analysis-table td,
+.analysis-table th {
+  vertical-align: middle;
+}
+.analysis-table .analysis-name {
+  text-align: left;
+  white-space: normal;
+  min-width: 150px;
+}
+.analysis-cookie {
+  display: grid;
+  gap: 2px;
+}
+.analysis-cookie a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+.analysis-cookie a:hover {
+  color: var(--accent);
+}
+.analysis-cookie small {
+  color: var(--muted);
+  font-size: 11px;
+}
+.analysis-best {
+  color: var(--accent);
+  font-weight: 700;
+}
+.analysis-priority {
+  text-align: left;
+  font-size: 12px;
+  color: var(--text-2);
+}
+
+/* 등급 표시 */
+.analysis-tier {
+  display: inline-grid;
+  place-items: center;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  background: var(--surface-3);
+  color: var(--text-2);
+}
+.analysis-tier-s {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+.analysis-tier-a {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+.analysis-tier-b {
+  background: var(--next-soft);
+  color: var(--next);
+}
+
+/* 추천 편성 */
+.analysis-team-stats {
+  margin: 12px 0;
+}
+.analysis-pets {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.analysis-pets li {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+  font-size: 13px;
+}
+.analysis-pets li > span:nth-child(2) {
+  color: var(--text-2);
+}
+.analysis-pets strong {
+  color: var(--good);
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  .analysis-pets li {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+  .analysis-pets li > span:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
+
+/* 개요 */
+.analysis-advantage,
+.analysis-modes,
+.analysis-links ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.analysis-advantage {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.analysis-advantage li {
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  font-size: 13px;
+}
+.analysis-el {
+  font-weight: 700;
+}
+.analysis-modes li {
+  display: grid;
+  gap: 2px;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.analysis-modes span {
+  font-size: 13px;
+  color: var(--text-2);
+}
+.analysis-links ul {
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+}
+.analysis-links a {
+  display: block;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  color: inherit;
+  text-decoration: none;
+  font-size: 13px;
+}
+.analysis-links a:hover {
+  border-color: var(--line-strong);
+  color: var(--accent);
+}
+
+/* 업데이트 일정 */
+.analysis-schedule {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.analysis-schedule li {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.analysis-schedule p {
+  margin: 0;
+}
+.analysis-when {
+  font-size: 12px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+.analysis-what {
+  font-weight: 700;
+  margin: 2px 0 4px !important;
+}
+
+/* 쿠폰 */
+.analysis-coupons {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.analysis-coupons > li {
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.analysis-coupons .subtle {
+  margin: 4px 0 8px;
+}
+.analysis-expired {
+  opacity: 0.7;
+}
+.analysis-coupon-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.analysis-coupon-head code {
+  font-size: 15px;
+  font-weight: 700;
+  word-break: break-all;
+}
+.analysis-live,
+.analysis-dead {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+.analysis-live {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.analysis-dead {
+  background: var(--surface-3);
+  color: var(--muted);
+}
+.analysis-rewards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.analysis-rewards li {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--surface-3);
+  font-size: 12px;
+}

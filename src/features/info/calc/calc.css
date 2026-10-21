@@ -1,0 +1,310 @@
+/* 계산기(피해 계산기·능력치 비교·빌드 메이커) 공용 배치 */
+.calc {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+.calc .panel {
+  min-width: 0;
+}
+.calc .panel > .subtle {
+  margin-bottom: 12px;
+}
+.calc .filter-row {
+  margin-top: 12px;
+}
+.calc-subhead {
+  margin: 18px 0 8px;
+  font-size: 15px;
+}
+
+/* 쿠키 고르기 */
+.calc-pick {
+  margin: 12px 0;
+}
+.calc-pick select {
+  width: 100%;
+  max-width: 420px;
+  height: 46px;
+}
+
+/* 숫자 입력 묶음 */
+.calc-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px 12px;
+  margin-top: 8px;
+}
+.calc-field {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+.calc-field span {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+.calc-field input {
+  width: 100%;
+  min-width: 0;
+  height: 38px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  font-family: var(--font-num);
+}
+
+/* 펫 3칸 */
+.calc-pets {
+  display: grid;
+  gap: 8px;
+}
+.calc-pet {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 84px;
+  gap: 8px;
+}
+.calc-pet select {
+  width: 100%;
+  min-width: 0;
+  height: 42px;
+}
+.calc-pet-status {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+}
+.calc-pet-status li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  padding: 8px 12px;
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+  color: var(--muted);
+}
+.calc-pet-status li.is-active {
+  background: var(--good-soft);
+  color: var(--good);
+}
+.calc-pet-status strong {
+  color: var(--text);
+}
+
+/* 결과 */
+.calc-result .detail-stats {
+  margin-bottom: 10px;
+}
+.calc-headline {
+  background: var(--accent-soft) !important;
+}
+.calc-headline dd {
+  color: var(--accent);
+}
+.calc-result .detail-table th small {
+  display: block;
+  font-weight: 500;
+}
+.calc-factor-table td.calc-note-cell {
+  text-align: left;
+  white-space: normal;
+  min-width: 220px;
+  color: var(--text-2);
+}
+.calc-total-row th,
+.calc-total-row td {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+/* 능력치 비교 */
+.calc-compare-picks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 8px 12px;
+  margin: 12px 0 4px;
+}
+.calc-compare-pick {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.calc-compare-pick select {
+  flex: 1;
+  min-width: 0;
+  height: 42px;
+}
+.calc-compare-table thead th {
+  min-width: 120px;
+  white-space: normal;
+  vertical-align: bottom;
+}
+.calc-compare-table thead th:first-child {
+  min-width: 0;
+}
+.calc-compare-table td {
+  min-width: 120px;
+}
+.calc-bar-value {
+  display: block;
+}
+.calc-bar {
+  display: block;
+  height: 6px;
+  margin-top: 4px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  overflow: hidden;
+}
+.calc-bar > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--line-strong);
+}
+.calc-compare-table td.is-best .calc-bar > span {
+  background: var(--accent);
+}
+.calc-compare-table td.is-best .calc-bar-value {
+  color: var(--accent);
+  font-weight: 700;
+}
+.calc-synergy-cell,
+.calc-wrap-cell {
+  white-space: normal !important;
+  text-align: left !important;
+}
+
+/* 빌드 메이커: 2열 × 6행 배치 */
+.calc-grid {
+  display: grid;
+  gap: 8px;
+  max-width: 520px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.calc-slot {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+  color: var(--text);
+  text-align: left;
+}
+.calc-slot[aria-pressed='true'] {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.calc-slot img {
+  flex: none;
+  border-radius: 10px;
+}
+.calc-slot-no {
+  flex: none;
+  min-width: 18px;
+  font-family: var(--font-num);
+  font-size: 12px;
+  color: var(--muted);
+}
+.calc-slot-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 600;
+}
+.calc-slot-editor {
+  margin-top: 6px;
+}
+.calc-synergy-table td {
+  white-space: normal;
+  text-align: left;
+  min-width: 120px;
+}
+.calc-synergy-table tr.is-dead th,
+.calc-synergy-table tr.is-dead td {
+  color: var(--muted);
+}
+
+/* 저장·공유 */
+.calc-save {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.calc-save input {
+  flex: 1 1 180px;
+  min-width: 0;
+  height: 42px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+}
+.calc-button {
+  height: 42px;
+  padding: 0 14px;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-weight: 700;
+}
+.calc-share-url {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  padding: 6px 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.calc-saved {
+  display: grid;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.calc-saved li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+}
+.calc-saved li span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 560px) {
+  .calc-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .calc-slot img {
+    width: 28px;
+    height: 28px;
+  }
+}

@@ -35,6 +35,16 @@ function isDemoUrl(): boolean {
   return params.get('demo') === '1' || params.get('fill') === '1'
 }
 
+/** 다른 화면(스테이지 정보)에서 ?ch=..&st=.. 로 넘어오면 그 스테이지를 골라 둔다. 범위를 벗어나면 무시한다. */
+function linkedStage(): { ch: string; st: string } | null {
+  const params = new URLSearchParams(window.location.search)
+  const ch = Number(params.get('ch'))
+  const st = Number(params.get('st'))
+  if (!Number.isInteger(ch) || ch < 1 || ch > MAX_CHAPTER) return null
+  if (!Number.isInteger(st) || st < 1 || st > STAGES_PER_CHAPTER) return { ch: String(ch), st: '' }
+  return { ch: String(ch), st: String(st) }
+}
+
 function AnswerValue({ children, unit = '' }: { children: ReactNode; unit?: string }) {
   return (
     <div className="answer-value">
@@ -237,7 +247,8 @@ export function NormalStage() {
     const saved = parseStoredForm(readStorage(FORM_KEY)) ?? { ...EMPTY_FORM }
     // 팀 전투력은 차원의 이면과 같이 쓰는 값을 우선한다.
     const sharedPower = readTeamPower()
-    return sharedPower === null ? saved : { ...saved, cpM: sharedPower }
+    const linked = linkedStage()
+    return { ...saved, ...(sharedPower === null ? {} : { cpM: sharedPower }), ...linked }
   })
   const contextRef = useRef<HTMLDivElement>(null)
   const powerInputRef = useRef<HTMLInputElement>(null)
@@ -251,6 +262,15 @@ export function NormalStage() {
     if (next) requestAnimationFrame(() => powerInputRef.current?.focus())
   }
   const stages = useQuery(stagesQuery)
+
+  // 링크로 받은 챕터·스테이지는 폼에 옮겼으니 주소에서 지워, 새로고침해도 사용자가 바꾼 값이 유지되게 한다.
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (!url.searchParams.has('ch') && !url.searchParams.has('st')) return
+    url.searchParams.delete('ch')
+    url.searchParams.delete('st')
+    window.history.replaceState(window.history.state, '', url)
+  }, [])
 
   // 예시 값이나 ?demo 링크로 채운 값은 저장하지 않는다.
   useEffect(() => {

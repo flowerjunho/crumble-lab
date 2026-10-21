@@ -19,6 +19,12 @@ npm run dev
 - `/stage/dimension`: 스테이지 계산 - 차원의 이면
 - `/info/cookies`: 크럼블 정보 - 쿠키 도감(`/info/cookies/<slug>`에서 쿠키 상세)
 - `/info/pets`: 크럼블 정보 - 펫 도감(`/info/pets/<slug>`에서 펫 상세)
+- `/info/<서브탭>`: 크럼블 정보의 나머지 서브탭. 목록과 묶음은 `src/features/info/infoTabs.ts` 한 곳에서 정하고, 각 화면은 처음 열 때 불러온다.
+  - 도감: `stages`(스테이지 정보), `dimension`(차원의 이면 보상·시즌)
+  - 성장·계산: `growth`(레벨·별 성장), `runes`(슈가룬 재조합), `gear`(장비·오븐·플레이트 강화), `resolve`(돌파력), `mercenary`(용병단), `stellar`(스텔라 링크), `packages`(패키지 가치)
+  - 계산기·시뮬레이터: `damage`(피해 계산기), `compare`(능력치 비교), `builds`(빌드 메이커), `battle`(전투 시뮬레이터), `dungeon`(던전 시뮬레이터), `gacha`(뽑기 시뮬레이터)
+  - 분석: `overview`(개요), `tiers`(우리 기준 티어), `teams`(추천 편성), `updates`(업데이트 일정)
+- 스테이지 계산은 `?ch=114&st=22`처럼 챕터·스테이지를 받아 미리 골라 둔다(스테이지 정보 화면의 계산기 링크).
 - `/recommend`: 추천 슈가룬
 - `/guide`: 크럼블 가이드
 
@@ -56,6 +62,7 @@ node scripts/import-eog-stages.mjs
 - `public/data/pet-db.json`: 펫 57종의 별 등급별 효과·대상 조건(속성·직업·시너지)·효과 묶음·적용 모드. 수치는 EOG.GG 공개 클라이언트 값이고, EOG가 수치를 싣지 않은 명중·회피·집중·저항 계열은 국내 배틀 패시브 문구에서 읽는다. 테스트가 모든 수치를 국내 문구와 대조한다.
 - `src/data/pet-text-ko.json`, `public/images/pets/`: 펫 국내 이름·소개 문구·별 등급별 패시브 문구와 이미지(cookieruncrumble.net 한국어 펫 페이지, 인게임 표기). 사이트가 쓴 분석·추천 문구는 저장하지 않는다.
 - 펫 다시 만들기: `node scripts/import-pet-text-ko.mjs && node scripts/import-eog-pets.mjs`
+- 크럼블 정보의 나머지 데이터는 `scripts/import-eog-*.mjs`(growth, dimension, stage-extras, gacha, runes, gear, systems, resolve, calc, sim, updates)로 만든다. 모두 EOG 번들의 데이터 리터럴을 내용 모양으로 찾아 읽고(실행하지 않음), EOG가 쓴 설명문·평가·티어는 가져오지 않는다. 번들에 없는 값(뽑기 레벨 누적 횟수, 플레이트 강화 확률·비용, 돌파력 비용 등)은 국내 확률 공개표와 cc.team-hobby.com 값을 쓰고 각 스크립트에 출처를 적었다.
 
 ## 보스 보정
 

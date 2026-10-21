@@ -1197,6 +1197,8 @@ input::placeholder {
   color: var(--text-2);
 }
 .table-scroll {
+  /* 안쪽의 절대 위치 요소(sr-only 등)가 스크롤 상자를 벗어나 페이지를 넓히지 않게 기준을 이 상자로 잡는다. */
+  position: relative;
   overflow-x: auto;
 }
 .band-table {
@@ -1916,16 +1918,34 @@ input::placeholder {
 
 /* ---------- 크럼블 정보: 서브탭 ---------- */
 .info-subtabs {
+  display: grid;
+  gap: 8px;
+  margin: 4px 0 18px;
+}
+.info-subtab-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.info-subtab-group-label {
+  flex: none;
+  width: 76px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--muted);
+}
+.info-subtab-links {
   display: flex;
   gap: 6px;
+  min-width: 0;
   overflow-x: auto;
-  margin: 4px 0 18px;
   padding-bottom: 2px;
   scrollbar-width: none;
 }
-.info-subtabs a {
+.info-subtab-links a {
   flex: none;
-  padding: 7px 14px;
+  padding: 6px 13px;
   border: 1px solid var(--line);
   border-radius: 999px;
   color: var(--text-2);
@@ -1933,10 +1953,21 @@ input::placeholder {
   font-size: 14px;
   font-weight: 700;
 }
-.info-subtabs a.active {
+.info-subtab-links a.active {
   border-color: var(--accent);
   background: var(--accent-soft);
   color: var(--accent);
+}
+@media (max-width: 640px) {
+  .info-subtab-group {
+    display: grid;
+    gap: 4px;
+  }
+}
+
+/* 그리드·플렉스 칸이 안쪽 표 너비만큼 늘어나 화면 밖으로 밀리지 않게 한다(넓은 표는 .table-scroll 안에서 가로로 넘긴다). */
+.info-section :is(div, section, article, form, fieldset, header, nav, ul, ol, li, label) {
+  min-width: 0;
 }
 
 /* ---------- 쿠키 도감: 목록 ---------- */

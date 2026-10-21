@@ -1,0 +1,125 @@
+/* 차원의 이면 정보(/info/dimension). 클래스는 모두 dimension-info- 로 시작한다. */
+.dimension-info {
+  display: grid;
+  gap: 14px;
+}
+.dimension-info .section-intro {
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+/* 긴 표는 상자 안에서만 세로로 넘긴다. */
+.dimension-info-tall {
+  max-height: 480px;
+  overflow-y: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-item);
+}
+.dimension-info-tall thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--surface-2);
+}
+.dimension-info-tall:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.dimension-info .detail-table tr.is-current th,
+.dimension-info .detail-table tr.is-current td {
+  background: var(--accent-soft);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+.dimension-info .detail-table tr.is-past th,
+.dimension-info .detail-table tr.is-past td {
+  color: var(--muted);
+}
+.dimension-info .detail-table tr.is-mark td,
+.dimension-info .detail-table tr.is-mark th {
+  background: var(--surface-2);
+}
+
+/* 차원의 조각이 아닌 보상이 걸린 단계 */
+.dimension-info-stages tr.is-special th,
+.dimension-info-stages tr.is-special td {
+  background: var(--next-soft);
+}
+.dimension-info-stages tr.is-special th {
+  box-shadow: inset 3px 0 0 var(--next);
+}
+.dimension-info-boss {
+  text-align: left !important;
+  color: var(--text-2);
+}
+
+.dimension-info-reward {
+  text-align: left !important;
+  white-space: normal !important;
+  min-width: 140px;
+}
+.dimension-info-rewards {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+}
+.dimension-info-rewards .is-special {
+  color: var(--next);
+  font-weight: 700;
+}
+
+.dimension-info-rotations {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+}
+
+.dimension-info-cycle {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: dimension-boss;
+}
+.dimension-info-cycle li {
+  padding: 10px 12px;
+  border-radius: var(--radius-item);
+  background: var(--surface-2);
+  counter-increment: dimension-boss;
+}
+.dimension-info-cycle-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+.dimension-info-cycle-head::before {
+  content: counter(dimension-boss);
+  min-width: 1.6em;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: 12px;
+  text-align: center;
+}
+.dimension-info-cycle p {
+  margin: 4px 0 0;
+  font-size: 13px;
+}
+.dimension-info-cycle-stages {
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+.dimension-info-new {
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--good-soft);
+  color: var(--good);
+  font-size: 12px;
+  font-weight: 700;
+}
