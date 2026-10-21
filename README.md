@@ -18,6 +18,7 @@ npm run dev
 - `/stage`: 스테이지 계산 - 일반 스테이지 (도전 범위 표 / 챕터 30개 스테이지 그래프·표 보기 전환)
 - `/stage/dimension`: 스테이지 계산 - 차원의 이면
 - `/info/cookies`: 크럼블 정보 - 쿠키 도감(`/info/cookies/<slug>`에서 쿠키 상세)
+- `/info/pets`: 크럼블 정보 - 펫 도감(`/info/pets/<slug>`에서 펫 상세)
 - `/recommend`: 추천 슈가룬
 - `/guide`: 크럼블 가이드
 
@@ -52,6 +53,9 @@ node scripts/import-eog-stages.mjs
 - 효과·능력치 용어는 국내 인게임 스킬 설명과 대조한 표기를 쓴다(띄우기 저항, 밀어내기 저항, 띄우기/밀치기 면역, 받는 회복량 감소, 명중률, 회피율, 보스피해, 길드 토벌전 등). `크기 증가`·`소환`은 인게임 표기를 찾지 못한 일반 표현이다.
 - `src/data/cookie-skill-names-ko.json`: 쿠키별 국내 스킬 이름(스킬 설명 문구는 저장하지 않는다). `node scripts/import-skill-names-ko.mjs`로 다시 만든다.
 - 다시 만들기: `node scripts/import-skill-names-ko.mjs && node scripts/import-eog-cookies.mjs`
+- `public/data/pet-db.json`: 펫 57종의 별 등급별 효과·대상 조건(속성·직업·시너지)·효과 묶음·적용 모드. 수치는 EOG.GG 공개 클라이언트 값이고, EOG가 수치를 싣지 않은 명중·회피·집중·저항 계열은 국내 배틀 패시브 문구에서 읽는다. 테스트가 모든 수치를 국내 문구와 대조한다.
+- `src/data/pet-text-ko.json`, `public/images/pets/`: 펫 국내 이름·소개 문구·별 등급별 패시브 문구와 이미지(cookieruncrumble.net 한국어 펫 페이지, 인게임 표기). 사이트가 쓴 분석·추천 문구는 저장하지 않는다.
+- 펫 다시 만들기: `node scripts/import-pet-text-ko.mjs && node scripts/import-eog-pets.mjs`
 
 ## 보스 보정
 

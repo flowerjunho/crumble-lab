@@ -169,3 +169,47 @@ export interface CookieDb {
   _meta: { source: string; sourceFile: string; fetchedAt: string; note: string }
   cookies: CookieEntry[]
 }
+
+/** 펫 효과 하나. how: flat(수치 더하기), pct(기본 능력치의 %만큼), rate(%p 더하기) */
+export interface PetEffect {
+  stat: string
+  how: 'flat' | 'pct' | 'rate'
+  value: number
+}
+
+export interface PetSynergyBoost {
+  key: SynergyKey
+  /** count: 시너지 개수 +N, pct: 시너지 효과 +N% */
+  unit: 'count' | 'pct'
+  value: number
+}
+
+export interface PetTier {
+  /** 국내 배틀 패시브 문구(인게임 표기) */
+  text: string
+  effects: PetEffect[]
+  synergy: PetSynergyBoost[]
+}
+
+export interface PetEntry {
+  id: number
+  slug: string
+  name: LocalizedText
+  rarity: string
+  image: string
+  /** 국내 소개 문구 */
+  flavor: string
+  /** 비어 있으면 아군 전체 */
+  target: { roles: CookieRole[]; elements: CookieElement[]; receivesSynergy: SynergyKey | null }
+  /** 비어 있지 않으면 그 모드에서만 효과가 있다(예: DIMENSION_STAGE). */
+  modes: string[]
+  /** 같은 묶음의 펫 효과는 겹치지 않고 가장 강한 하나만 적용된다. */
+  group: number
+  /** 별 1~5 */
+  tiers: PetTier[]
+}
+
+export interface PetDb {
+  _meta: { source: string; sourceFile: string; fetchedAt: string; note: string }
+  pets: PetEntry[]
+}

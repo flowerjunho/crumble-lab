@@ -3,6 +3,7 @@ export const ROUTES = {
   dimension: '/stage/dimension',
   info: '/info',
   cookies: '/info/cookies',
+  pets: '/info/pets',
   recommend: '/recommend',
   guide: '/guide',
 } as const

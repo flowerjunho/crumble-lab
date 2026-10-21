@@ -1,11 +1,12 @@
 import { useEffect } from 'react'
 import { Link, useLocation, useParams } from 'react-router'
 import { useQuery } from '@tanstack/react-query'
-import { cookieDbQuery } from '../../api/queries'
+import { cookieDbQuery, petDbQuery } from '../../api/queries'
 import { pick, useI18n } from '../../i18n'
 import { asset } from '../../lib/asset'
 import { ELEMENT, ROLE, SYNERGY, TARGETING, describeEffect, label, pct } from '../../lib/cookieLabels'
 import { localizedText } from '../../lib/localize'
+import { isTargetedPet, petAffectsCookie, petTargetLabel } from '../../lib/petLabels'
 import { ROUTES } from '../../routes'
 import type { CookieEntry, CookieSkillPart, Locale } from '../../types'
 
@@ -121,6 +122,7 @@ export function CookieDetailPage() {
   const { locale, t } = useI18n()
   const l = <T,>(ko: T, en: T, ja: T) => pick(locale, ko, en, ja)
   const { data, isPending } = useQuery(cookieDbQuery)
+  const { data: petDb } = useQuery(petDbQuery)
   const index = data?.cookies.findIndex((c) => c.slug === slug) ?? -1
   const cookie = index >= 0 ? data!.cookies[index] : undefined
   const prev = index > 0 ? data!.cookies[index - 1] : undefined
@@ -143,6 +145,8 @@ export function CookieDetailPage() {
     )
 
   const name = localizedText(cookie.name, locale)
+  // 아군 전체 대상 펫은 모든 쿠키에 해당하므로, 속성·직업·시너지 조건이 이 쿠키와 맞는 펫만 보여 준다.
+  const matchingPets = (petDb?.pets ?? []).filter((pet) => isTargetedPet(pet) && petAffectsCookie(pet, cookie))
   const synergyLink = (key: string, side: 'gives' | 'receives') => `${ROUTES.cookies}?synergy=${key}&side=${side}`
 
   return (
@@ -262,6 +266,27 @@ export function CookieDetailPage() {
         ) : (
           <p className="subtle">{l('버프·디버프 없이 피해만 주는 스킬입니다.', 'Damage only, no buffs or debuffs.', 'バフ・デバフなしでダメージのみのスキルです。')}</p>
         )}
+      </section>
+
+      <section className="panel detail-section" aria-labelledby="pets-title">
+        <h3 id="pets-title">{l('이 쿠키에게 효과가 있는 펫', 'Pets that target this Cookie', 'このクッキーに効果があるペット')}</h3>
+        {matchingPets.length ? (
+          <ul className="pet-cookies">
+            {matchingPets.map((pet) => (
+              <li key={pet.slug}>
+                <Link to={`${ROUTES.pets}/${pet.slug}`}>
+                  <img src={asset(pet.image)} alt="" width="30" height="30" loading="lazy" />
+                  <span>{localizedText(pet.name, locale)}</span>
+                  <span className={`rarity-badge rarity-${pet.rarity.toLowerCase()}`}>{pet.rarity}</span>
+                  <span className="subtle">{petTargetLabel(pet, locale)}</span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="subtle">{l('펫 정보를 불러오고 있습니다.', 'Loading…', '読み込み中…')}</p>
+        )}
+        <p className="field-note">{l('아군 전체에 적용되는 펫은 빼고, 속성·직업·시너지 조건이 맞는 펫만 모았습니다.', 'Pets that help every ally are left out; only Pets whose element, role or Synergy condition fits are listed.', '味方全体に効くペットは除き、属性・職業・シナジー条件が合うペットだけを集めました。')}</p>
       </section>
 
       <section className="panel detail-section" aria-labelledby="runes-title">

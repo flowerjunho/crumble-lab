@@ -1,5 +1,5 @@
 import { queryOptions } from '@tanstack/react-query'
-import type { CookieDb, CookiesData, DimensionData, StageBossesData, StagesData } from '../types'
+import type { CookieDb, CookiesData, PetDb, DimensionData, StageBossesData, StagesData } from '../types'
 import { asset } from '../lib/asset'
 import { applyBossOverrides, type BossOverrideFile } from '../lib/bossOverrides'
 import { mergeStageBosses } from '../lib/stageBosses'
@@ -62,5 +62,11 @@ export const cookiesQuery = queryOptions({
 export const cookieDbQuery = queryOptions({
   queryKey: ['crumble', 'cookie-db'],
   queryFn: () => fetchJson<CookieDb>(asset('/data/cookie-db.json')),
+  ...STATIC,
+})
+
+export const petDbQuery = queryOptions({
+  queryKey: ['crumble', 'pet-db'],
+  queryFn: () => fetchJson<PetDb>(asset('/data/pet-db.json')),
   ...STATIC,
 })
