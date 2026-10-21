@@ -11,7 +11,8 @@ const bossOverrides: BossOverrideFile = bossOverridesJson
 export const DIMENSION_SEASON = 2
 
 async function fetchJson<T>(path: string): Promise<T> {
-  const response = await fetch(path)
+  // 빌드마다 주소가 바뀌어서 배포 직후 예전 캐시를 읽지 않는다.
+  const response = await fetch(`${path}?v=${__BUILD_ID__}`)
   if (!response.ok) throw new Error(`${path} 요청이 실패했습니다 (${response.status})`)
   return (await response.json()) as T
 }
