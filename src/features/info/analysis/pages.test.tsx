@@ -55,7 +55,7 @@ describe('티어·편성·개요·일정 화면', () => {
 
   it('개요에 쿠키·펫 수와 최대 스테이지가 나온다', () => {
     const html = render(<OverviewPage />)
-    expect(html).toContain('364-30')
+    expect(html).toContain('424-30')
     expect(html).toContain('77종')
   })
 

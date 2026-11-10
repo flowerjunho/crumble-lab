@@ -19,8 +19,9 @@ const stages = read<EogStagesData>('public/data/eog-stages.json')
 const extras = read<StageExtrasData>('public/data/stage-extras.json')
 
 describe('스테이지 표', () => {
-  it('364챕터 × 30스테이지가 1-1부터 순서대로 있다', () => {
-    expect(stages.rows).toHaveLength(10920)
+  it('424챕터 × 30스테이지가 1-1부터 순서대로 있다', () => {
+    expect(stages.rows).toHaveLength(12720)
+    expect(stages._meta.chapters).toBe(424)
     stages.rows.forEach((row, i) => expect(stageOrder(row[0], row[1])).toBe(i + 1))
   })
 
@@ -47,9 +48,10 @@ describe('챕터별 권장 전투력 그래프', () => {
   const series = chapterSeries(stages)
 
   it('챕터마다 점이 하나씩 있고 최고값은 30번째 스테이지 값이다', () => {
-    expect(series).toHaveLength(364)
+    expect(series).toHaveLength(424)
     expect(series[0]).toEqual({ chapter: 1, first: 1600, max: 10258 })
     expect(series[363]!.max).toBe(24202164458)
+    expect(series[423]!.max).toBe(105503109842)
   })
 
   it('로그 눈금에 쓸 수 있게 모든 값이 0보다 크다', () => {
@@ -80,7 +82,7 @@ describe('자동 사냥 보상', () => {
   })
 
   it('모든 챕터에 보상 구간이 있고 1~30을 빈틈없이 덮는다', () => {
-    for (let ch = 1; ch <= 364; ch++) {
+    for (let ch = 1; ch <= stages._meta.chapters; ch++) {
       const bands = chapterOffline(stages, ch)
       expect(bands[0]!.fromStage).toBe(1)
       expect(bands[bands.length - 1]!.toStage).toBe(30)

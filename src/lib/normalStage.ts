@@ -11,7 +11,7 @@ import {
   type PowerPenalty,
 } from './formulas'
 
-export const MAX_CHAPTER = 364
+export const MAX_CHAPTER = 424
 export const STAGES_PER_CHAPTER = 30
 const TOTAL_STAGES = MAX_CHAPTER * STAGES_PER_CHAPTER
 
@@ -153,7 +153,7 @@ export function computeNormalStage(data: StagesData, form: NormalStageForm, loca
       st < 1 ||
       st > STAGES_PER_CHAPTER)
   ) {
-    return { error: '챕터와 스테이지를 함께 입력해 주세요. 챕터는 1–364, 스테이지는 1–30입니다.' }
+    return { error: '챕터와 스테이지를 함께 입력해 주세요. 챕터는 1–424, 스테이지는 1–30입니다.' }
   }
   if (cpM !== null && (!Number.isFinite(cpM) || cpM <= 0 || !Number.isSafeInteger(Math.ceil(1e6 * cpM)))) {
     return { error: '팀 전투력은 0보다 큰 값으로, M 단위로 입력해 주세요.' }

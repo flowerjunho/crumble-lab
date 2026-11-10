@@ -5,15 +5,15 @@ import type { DimensionData, StagesData } from '../types'
 import messages from '../messages.json'
 import { DAMAGE_BANDS, powerPenalty } from './formulas'
 import { formatDimensionMillions, formatMillionsUnit } from './format'
-import { DEMO_FORM, computeChapter, computeNormalStage, shiftStage, type NormalStageResult } from './normalStage'
+import { DEMO_FORM, MAX_CHAPTER, computeChapter, computeNormalStage, shiftStage, type NormalStageResult } from './normalStage'
 
 const root = join(__dirname, '..', '..')
 const stages = JSON.parse(readFileSync(join(root, 'public/data/stages.json'), 'utf8')) as StagesData
 const dimension = JSON.parse(readFileSync(join(root, 'public/data/dimension.json'), 'utf8')) as DimensionData
 
 /**
- * 기대값은 2026-10-19 alkapa.gg 원본 화면에 같은 값을 넣고 읽은 결과다.
- * 일반: 114-22, 105M, 명중 620, 집중 760 / 차원: 10단계, 30000M, 레벨 10
+ * 일반 스테이지 기대값은 2026-10-19 alkapa.gg 원본 화면에 같은 값을 넣고 읽은 결과다(114-22, 105M, 명중 620, 집중 760).
+ * 차원의 이면 기대값은 시즌 4 데이터(alkapa.gg stages-1.6.102)의 10단계 권장 전투력으로 같은 공식을 따로 계산한 값이다(130000M, 레벨 10).
  */
 describe('일반 스테이지 (원본 화면과 비교)', () => {
   const outcome = computeNormalStage(stages, DEMO_FORM, 'ko')
@@ -61,7 +61,7 @@ describe('일반 스테이지 (원본 화면과 비교)', () => {
   it('스테이지 이동은 양 끝에서 멈춘다', () => {
     expect(shiftStage({ ch: 1, st: 30 }, 1)).toEqual({ ch: 2, st: 1 })
     expect(shiftStage({ ch: 1, st: 1 }, -1)).toEqual({ ch: 1, st: 1 })
-    expect(shiftStage({ ch: 364, st: 30 }, 1)).toEqual({ ch: 364, st: 30 })
+    expect(shiftStage({ ch: 424, st: 30 }, 1)).toEqual({ ch: 424, st: 30 })
   })
 })
 
@@ -91,32 +91,33 @@ describe('챕터 전체 보기', () => {
 
 describe('차원의 이면 (원본 화면과 비교)', () => {
   const required = Number(dimension.stages[9]!.cp)
-  const penalty = powerPenalty(30000 * 1e6, required)
+  const penalty = powerPenalty(130000 * 1e6, required)
 
   it('피해 구간과 다음 목표', () => {
+    expect(required).toBe(503745660151)
     expect(penalty.multiplier).toBe(0.15)
-    expect((100 * penalty.ratio).toFixed(2)).toBe('26.44')
+    expect((100 * penalty.ratio).toFixed(2)).toBe('25.81')
     expect(penalty.nextMultiplier).toBe(0.35)
-    expect(formatDimensionMillions(penalty.nextTarget, 'ko')).toBe('45,379.123932')
-    expect(formatDimensionMillions(penalty.needed, 'ko')).toBe('15,379.123932')
+    expect(formatDimensionMillions(penalty.nextTarget, 'ko')).toBe('201,498.264061')
+    expect(formatDimensionMillions(penalty.needed, 'ko')).toBe('71,498.264061')
   })
 
   it('구간별 진입 전투력 표', () => {
     expect(DAMAGE_BANDS.map((band) => formatDimensionMillions(Math.ceil(required * band.min), 'ko'))).toEqual([
       '0',
-      '11,344.780983',
-      '22,689.561966',
-      '45,379.123932',
-      '68,068.685898',
-      '90,758.247864',
-      '113,447.809829',
-      '136,137.371795',
+      '50,374.566016',
+      '100,749.132031',
+      '201,498.264061',
+      '302,247.396091',
+      '402,996.528121',
+      '503,745.660151',
+      '604,494.792182',
     ])
   })
 
   it('적 정보와 차원의 힘', () => {
     expect(dimension.stages[9]!.avoidance).toBe(2287)
-    expect(dimension.stages[9]!.resist).toBe(2327)
+    expect(dimension.stages[9]!.resist).toBe(2543)
     expect(dimension.energy[9]!.total).toBe(24870)
     expect(dimension.energy[10]!.total - dimension.energy[9]!.total).toBe(6000)
     expect(dimension.rewards.find((r) => r.stages.includes(10))?.perMinute).toBe(10)
@@ -126,7 +127,8 @@ describe('차원의 이면 (원본 화면과 비교)', () => {
 describe('데이터 무결성', () => {
   it('일반 스테이지 필요 전투력은 순서대로 커진다(이분 탐색 전제)', () => {
     const rows = stages.rows
-    expect(rows).toHaveLength(364 * 30)
+    expect(rows).toHaveLength(MAX_CHAPTER * 30)
+    expect(stages._meta.maxChapter).toBe(MAX_CHAPTER)
     expect(rows.every((row, i) => i === 0 || row[2] >= rows[i - 1]![2])).toBe(true)
   })
 })

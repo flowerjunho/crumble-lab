@@ -16,8 +16,9 @@ const bossOf = (ch: number, st: number) => {
 }
 
 describe('스테이지별 보스(게임 클라이언트 기준)', () => {
-  it('10,920개 스테이지가 모두 있고 보스 이름이 한·영·일 모두 채워져 있다', () => {
-    expect(stageBosses.rows).toHaveLength(364 * 30)
+  it('stages.json과 같은 수(424챕터 × 30)의 스테이지가 모두 있고 보스 이름이 한·영·일 모두 채워져 있다', () => {
+    expect(stageBosses.rows).toHaveLength(424 * 30)
+    expect(stageBosses.rows).toHaveLength(raw.rows.length)
     for (const names of stageBosses.bosses) {
       expect(names.ko && names.en && names.ja).toBeTruthy()
     }
@@ -65,8 +66,8 @@ describe('스테이지별 보스(게임 클라이언트 기준)', () => {
 describe('EOG 종합 스테이지 데이터(eog-stages.json)', () => {
   const full = read<{ bosses: unknown[]; rows: number[][]; offline: { items: unknown[]; ranges: number[][] } }>('public/data/eog-stages.json')
 
-  it('1-1부터 364-30까지 순서대로 빠짐없이 있다', () => {
-    expect(full.rows).toHaveLength(10920)
+  it('1-1부터 424-30까지 순서대로 빠짐없이 있다', () => {
+    expect(full.rows).toHaveLength(12720)
     full.rows.forEach((row, i) => {
       expect(row[0]).toBe(Math.floor(i / 30) + 1)
       expect(row[1]).toBe((i % 30) + 1)
@@ -92,7 +93,7 @@ describe('EOG 종합 스테이지 데이터(eog-stages.json)', () => {
   it('오프라인 보상 구간이 1번부터 마지막 스테이지까지 이어진다', () => {
     const ranges = full.offline.ranges
     expect(ranges[0]![0]).toBe(1)
-    expect(ranges.at(-1)![1]).toBe(10920)
+    expect(ranges.at(-1)![1]).toBe(12720)
     for (let i = 1; i < ranges.length; i++) expect(ranges[i]![0]).toBe(ranges[i - 1]![1]! + 1)
   })
 })

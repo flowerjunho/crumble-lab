@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * EOG.GG가 게임 클라이언트의 스테이지 표에서 읽어 공개한 데이터를 1-1 ~ 364-30 전체로 정리한다.
+ * EOG.GG가 게임 클라이언트의 스테이지 표에서 읽어 공개한 데이터를 1-1부터 마지막 스테이지까지 정리한다.
+ * 스테이지 수는 번들에 든 값을 쓰고, public/data/stages.json과 같아야 한다(그 파일을 먼저 갱신한다).
  *
  * 만드는 파일
  *   public/data/eog-stages.json   스테이지별 종합 데이터(권장 전투력·명중·집중·보스·마리 수·체력·공격·방어 등)
@@ -20,7 +21,6 @@ import { dirname, join } from 'node:path'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const EOG_PAGE = 'https://eog.gg/games/cookierun-crumble/'
 const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-const STAGES = 10920
 const PER_CHAPTER = 30
 
 const fail = (message) => {
@@ -67,7 +67,7 @@ const stringLiteral = (text, name) =>
 
 /** EOG의 es(): 쉼표로 나눈 36진수 증분을 누적하고 10으로 나눈다(소수 첫째 자리). */
 function decodeDelta(text, name) {
-  const raw = text.match(new RegExp(`[,;{\\s]${name}=es\\("([^"]*)"\\)`))?.[1] ?? fail(`${name} 증분 배열을 찾지 못했습니다.`)
+  const raw = text.match(new RegExp(`[,;{\\s]${name}=[A-Za-z_$][\\w$]*\\("([^"]*)"\\)`))?.[1] ?? fail(`${name} 증분 배열을 찾지 못했습니다.`)
   let sum = 0
   return raw.split(',').map((token) => {
     sum += parseInt(token, 36)
@@ -104,17 +104,39 @@ const timeRuns = parseLiteral(arrayLiteral(stages, local('TIME_RUNS')))
 const offlineItems = parseLiteral(arrayLiteral(stages, local('OFFLINE_ITEMS')))
 const offlineRanges = parseLiteral(arrayLiteral(stages, local('OFFLINE_RANGES')))
 
-// 메인 번들: 권장 전투력(Na), 필요 명중(rr), 적 명중(Yd), 필요 집중(or)
-const recommendedPower = parseLiteral(arrayLiteral(main, 'Na'))
-const accuracyNeeded = decodeDelta(main, 'rr')
-const enemyAccuracy = decodeDelta(main, 'Yd')
-const focusNeeded = decodeDelta(main, 'or')
+// 메인 번들의 변수 이름은 빌드마다 바뀌므로 내용으로 찾는다.
+// 스테이지 수: {chapters:N,perChapter:30,stages:N}
+const sizeMatch = main.match(/\{chapters:(\d+),perChapter:(\d+),stages:(\d+)\}/) ?? fail('크럼블 번들에서 스테이지 수를 찾지 못했습니다.')
+const STAGES = Number(sizeMatch[3])
+if (Number(sizeMatch[2]) !== PER_CHAPTER || Number(sizeMatch[1]) * PER_CHAPTER !== STAGES) fail(`스테이지 수 모양이 다릅니다: ${sizeMatch[0]}`)
+
+// 권장 전투력: 1-1부터 시작하는 숫자 배열
+const recommendedPower = parseLiteral(arrayLiteral(main, main.match(/[,;{\s]([A-Za-z_$][\w$]*)=\[1600,1950,/)?.[1] ?? fail('권장 전투력 배열을 찾지 못했습니다.')))
+
+// 필요 명중·필요 집중·적 명중: 스테이지 수만큼의 36진수 증분 문자열. 어느 것이 무엇인지는
+// stages.json의 적 회피·적 저항(소수 첫째 자리 반올림 값)과 맞춰 보고 정한다.
+const base = JSON.parse(await readFile(join(ROOT, 'public/data/stages.json'), 'utf8'))
+if (base.rows.length !== STAGES) fail(`stages.json 스테이지 수(${base.rows.length})가 EOG(${STAGES})와 다릅니다. stages.json을 먼저 갱신하세요.`)
+const deltaArrays = [...main.matchAll(/[,;{\s]([A-Za-z_$][\w$]*)=[A-Za-z_$][\w$]*\("([0-9a-z,]+)"\)/g)]
+  .filter((m) => m[2].split(',').length === STAGES)
+  .map((m) => ({ name: m[1], values: decodeDelta(main, m[1]) }))
+const closeTo = (values, column) => values.every((v, i) => Math.abs(v - base.rows[i][column]) <= 1)
+const pick = (label, test) => {
+  const found = deltaArrays.filter(test)
+  if (found.length !== 1) fail(`${label} 배열을 하나로 정하지 못했습니다(후보 ${found.length}개).`)
+  return found[0]
+}
+const accuracy = pick('필요 명중', (a) => closeTo(a.values, 3))
+const focus = pick('필요 집중', (a) => a !== accuracy && closeTo(a.values, 4))
+const enemy = pick('적 명중', (a) => a !== accuracy && a !== focus)
+const accuracyNeeded = accuracy.values
+const focusNeeded = focus.values
+const enemyAccuracy = enemy.values
 
 const lengths = { bossStream: bossStream.length, countStream: countStream.length, bossHp: bossHp.length, bossAtk: bossAtk.length, recommendedPower: recommendedPower.length, accuracyNeeded: accuracyNeeded.length, enemyAccuracy: enemyAccuracy.length, focusNeeded: focusNeeded.length }
 for (const [key, length] of Object.entries(lengths)) if (length !== STAGES) fail(`${key} 길이가 ${STAGES}가 아닙니다: ${length}`)
 
 // 보스 이름을 한·영·일로 맞춘다.
-const base = JSON.parse(await readFile(join(ROOT, 'public/data/stages.json'), 'utf8'))
 const normalize = (name) => name.replace(/\s+/g, ' ').trim().toLowerCase()
 const localized = new Map()
 for (const [names] of base.bosses) {

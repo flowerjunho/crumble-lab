@@ -599,9 +599,9 @@
   "Base rates vary by Cookie and promotion. Additional Focus Rate, companion pets and status immunity are excluded. Allow some margin at thresholds.",
   "基本適用率はクッキー・昇級によって異なります。追加の集中確率・同行ペット・状態異常免疫は含みません。必要値の境界には余裕を持たせてください。"
  ],
- "챕터와 스테이지를 함께 입력해 주세요. 챕터는 1–364, 스테이지는 1–30입니다.": [
-  "Enter both chapter (1–364) and stage (1–30).",
-  "チャプター（1～364）とステージ（1～30）を両方入力してください。"
+ "챕터와 스테이지를 함께 입력해 주세요. 챕터는 1–424, 스테이지는 1–30입니다.": [
+  "Enter both chapter (1–424) and stage (1–30).",
+  "チャプター（1～424）とステージ（1～30）を両方入力してください。"
  ],
  "팀 전투력은 0보다 큰 값으로, M 단위로 입력해 주세요.": [
   "Enter team Power greater than 0 in millions (M).",

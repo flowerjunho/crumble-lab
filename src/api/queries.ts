@@ -8,7 +8,7 @@ import bossOverridesJson from '../data/boss-overrides.json'
 const bossOverrides: BossOverrideFile = bossOverridesJson
 
 /** 원본이 쓰는 데이터 묶음과 같은 시즌이어야 계산이 맞는다. */
-export const DIMENSION_SEASON = 2
+export const DIMENSION_SEASON = 4
 
 async function fetchJson<T>(path: string): Promise<T> {
   // 빌드마다 주소가 바뀌어서 배포 직후 예전 캐시를 읽지 않는다.

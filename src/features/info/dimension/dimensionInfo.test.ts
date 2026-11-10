@@ -24,8 +24,8 @@ const rotation = (no: number) => data.rotations.find((r) => r.rotation === no) ?
 const kst = (s: string) => Date.parse(`${s.replace(' ', 'T')}:00+09:00`)
 
 describe('차원의 이면 정보 데이터', () => {
-  it('순환 2개, 각 100단계이고 단계 번호가 1부터 이어진다', () => {
-    expect(data.rotations.map((r) => r.stages.length)).toEqual([100, 100])
+  it('순환 4개, 각 100단계이고 단계 번호가 1부터 이어진다', () => {
+    expect(data.rotations.map((r) => r.stages.length)).toEqual([100, 100, 100, 100])
     for (const r of data.rotations) r.stages.forEach((s, i) => expect(s.stage).toBe(i + 1))
   })
 
@@ -39,13 +39,13 @@ describe('차원의 이면 정보 데이터', () => {
     expect(pets.find((p) => p.name.en === 'Continuum Cog')?.name.ko).toBe(data.items.continuumCog?.ko)
   })
 
-  it('시즌은 번호 순서대로 겹치지 않고, 시즌 1만 1순환을 쓴다', () => {
+  it('시즌은 번호 순서대로 겹치지 않고, 시즌 1~3은 같은 번호 순환, 4부터는 4순환을 쓴다', () => {
     data.seasons.forEach((s, i) => {
       expect(s.season).toBe(i + 1)
       expect(Date.parse(s.start)).toBeLessThan(Date.parse(s.end))
       const prev = data.seasons[i - 1]
       if (prev) expect(Date.parse(prev.end)).toBeLessThanOrEqual(Date.parse(s.start))
-      expect(s.rotation).toBe(s.season === 1 ? 1 : 2)
+      expect(s.rotation).toBe(Math.min(s.season, 4))
     })
   })
 
@@ -69,6 +69,17 @@ describe('차원의 이면 정보 데이터', () => {
     expect(name(bossAt(rotation(2), 5))).toBe('숙성의 대천사')
     expect(name(bossAt(rotation(2), 100))).toBe('폭주단 트럭')
     expect(stagesOfBoss(rotation(2), 'well-aged-archangel').slice(0, 3)).toEqual([5, 11, 17])
+  })
+
+  it('4순환(시즌 4~)에는 둥둥 북이 7단계마다 나오고, 단계 계산기 데이터(dimension.json)의 적과 100단계 모두 맞는다', () => {
+    const r4 = rotation(4)
+    expect(stagesOfBoss(r4, 'doom-doom-drums').slice(0, 3)).toEqual([7, 14, 21])
+    const calc = read<{ season: number; stages: { stage: number; enemies: { names: { ko: string } }[] }[] }>('public/data/dimension.json')
+    expect(calc.season).toBe(4)
+    for (const stage of calc.stages) {
+      const boss = data.bosses.find((b) => b.key === bossAt(r4, stage.stage))!.name.ko
+      expect(stage.enemies.map((e) => e.names.ko)).toContain(boss)
+    }
   })
 })
 
